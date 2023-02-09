@@ -27,7 +27,6 @@ typedef	struct s_game {
 	void	*img;
 	void	*win;
 	char	*map;
-	char	**map_2;
 	int		map_height;// altura of the map //
 	int		map_width;// anchura del mapa //
 	char	**matrix;

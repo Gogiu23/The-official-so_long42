@@ -6,7 +6,7 @@
 /*   By: gdominic <gdominic@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 12:22:01 by gdominic          #+#    #+#             */
-/*   Updated: 2023/02/09 14:20:05 by gdominic         ###   ########.fr       */
+/*   Updated: 2023/02/09 20:04:17 by gdominic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ void	ft_get_size_map(t_game *so_long, int fd, char *argv[])
 		if (!so_long->map)
 			break;
 		so_long->map_width = ft_strlen(so_long->map) - 1;
+		ft_printf("%p\n", so_long->map);
 		free(so_long->map);
 		so_long->map_height++;
 	}
