@@ -6,7 +6,7 @@
 /*   By: gdominic <gdominic@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 20:42:42 by gdominic          #+#    #+#             */
-/*   Updated: 2023/02/03 12:23:42 by gdominic         ###   ########.fr       */
+/*   Updated: 2023/02/09 10:13:24 by gdominic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ t_game	*ft_init_game(void)
 {
 	t_game	*so_long;
 
+//	ft_printf("Hola\n");
 	so_long = ft_init_struct();
 	ft_init_variables_struct(so_long);
 	return (so_long);
@@ -31,8 +32,12 @@ t_game	*ft_init_struct(void)
 	if (!so_long)
 		exit (EXIT_FAILURE);
 	so_long->imgs = ft_calloc((sizeof(t_img) * 1), 1);
-	if (!so_long->img)
+	if (!so_long->imgs)
 		exit (EXIT_FAILURE);
+	so_long->chars = ft_calloc((sizeof(t_char) * 1), 1);
+	if (!so_long->chars)
+		exit (EXIT_FAILURE);
+//	ft_printf("Hola\n");
 	return (so_long);
 }
 

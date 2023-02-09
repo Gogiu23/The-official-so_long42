@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   so_long.c                                          :+:      :+:    :+:   */
+/*   before_leaving.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gdominic <gdominic@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/02 20:26:23 by gdominic          #+#    #+#             */
-/*   Updated: 2023/02/09 14:34:20 by gdominic         ###   ########.fr       */
+/*   Created: 2023/02/09 14:35:40 by gdominic          #+#    #+#             */
+/*   Updated: 2023/02/09 14:41:29 by gdominic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,24 @@
 #include "../libft/includes/libft.h"
 #include "../mlx/mlx.h"
 
-int	main(int argc, char *argv[])
+void	ft_free(t_game *so_long)
 {
-	t_game	*so_long;
-	int		fd;
+	int	nbr;
 
-	if (argc == 1)
-		return (0);
-	fd = open(argv[1], O_RDONLY);
-//	ft_printf("hola");
-	so_long = ft_init_game();
-	ft_get_size_map(so_long, fd, argv);
-	ft_check_errors(so_long);
-	ft_print_stack(so_long);
-	ft_free(so_long);
-	return (0);
+	nbr = 0;
+	if (so_long->matrix)
+	{
+		exit (0);
+		while (so_long->matrix[nbr])
+		{
+			free(so_long->matrix[nbr]);
+			nbr++;
+		}
+		free(so_long->matrix);
+		if (so_long->imgs)
+			free(so_long->imgs);
+		if (so_long->chars)
+			free(so_long->chars);
+	}
 }
+

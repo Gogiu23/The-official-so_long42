@@ -4,14 +4,14 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-ATLAS_NB_CHAR	mlx/mlx_string_put.c	/^#define ATLAS_NB_CHAR /;"	d	file:
+ATLAS_NB_CHAR	mlx/mlx_string_put.c	6;"	d	file:
 BLACK	Makefile	/^BLACK		=   \\034[0;30m$/;"	m
 BLACK	libft/Makefile	/^BLACK			=	\\033[0;30m$/;"	m
 BLUE	Makefile	/^BLUE		=	\\033[0;34m$/;"	m
 BLUE	libft/Makefile	/^BLUE			=	\\033[0;34m$/;"	m
 BLUE	mlx/Makefile	/^BLUE=$'\\x1b[34m$/;"	m
 BOLD	mlx/Makefile	/^BOLD=$'\\x1b[1m$/;"	m
-BUFFER_SIZE	libft/includes/get_next_line_bonus.h	/^#  define BUFFER_SIZE /;"	d
+BUFFER_SIZE	libft/includes/get_next_line_bonus.h	16;"	d
 CC	Makefile	/^CC				= gcc$/;"	m
 CC	libft/Makefile	/^CC 				= gcc$/;"	m
 CFLAGS	Makefile	/^CFLAGS			= -Wall -Wextra -Werror -g -MMD$/;"	m
@@ -29,21 +29,21 @@ DEPS	libft/Makefile	/^DEPS			= $(SOURCES:.c=.d)$/;"	m
 DEPS_BONUS	Makefile	/^DEPS_BONUS			=$(SOURCES_BONUS:.c=.d)$/;"	m
 DFLAGS	libft/Makefile	/^DFLAGS			= -MMD -MP -g$/;"	m
 END	mlx/Makefile	/^END=$'\\x1b[0m$/;"	m
-ERR_DATA_FILTER	mlx/mlx_png.c	/^#define	ERR_DATA_FILTER	/;"	d	file:
-ERR_DATA_MISMATCH	mlx/mlx_png.c	/^#define	ERR_DATA_MISMATCH	/;"	d	file:
-ERR_MAGIC_SIZE	mlx/mlx_png.c	/^#define	ERR_MAGIC_SIZE	/;"	d	file:
-ERR_MAGIC_WRONG	mlx/mlx_png.c	/^#define	ERR_MAGIC_WRONG	/;"	d	file:
-ERR_MALLOC	mlx/mlx_png.c	/^#define ERR_MALLOC	/;"	d	file:
-ERR_STRUCT_CRC	mlx/mlx_png.c	/^#define	ERR_STRUCT_CRC	/;"	d	file:
-ERR_STRUCT_DAT	mlx/mlx_png.c	/^#define	ERR_STRUCT_DAT	/;"	d	file:
-ERR_STRUCT_END	mlx/mlx_png.c	/^#define	ERR_STRUCT_END	/;"	d	file:
-ERR_STRUCT_HDR	mlx/mlx_png.c	/^#define	ERR_STRUCT_HDR	/;"	d	file:
-ERR_STRUCT_INCIMPL	mlx/mlx_png.c	/^#define	ERR_STRUCT_INCIMPL /;"	d	file:
-ERR_STRUCT_INCOMPLETE	mlx/mlx_png.c	/^#define	ERR_STRUCT_INCOMPLETE	/;"	d	file:
-ERR_STRUCT_MISSCHK	mlx/mlx_png.c	/^#define	ERR_STRUCT_MISSCHK	/;"	d	file:
-ERR_ZLIB	mlx/mlx_png.c	/^#define	ERR_ZLIB	/;"	d	file:
-FONT_WIDTH	mlx/mlx_string_put.c	/^#define FONT_WIDTH	/;"	d	file:
-GET_NEXT_LINE_BONUS_H	libft/includes/get_next_line_bonus.h	/^# define GET_NEXT_LINE_BONUS_H$/;"	d
+ERR_DATA_FILTER	mlx/mlx_png.c	35;"	d	file:
+ERR_DATA_MISMATCH	mlx/mlx_png.c	34;"	d	file:
+ERR_MAGIC_SIZE	mlx/mlx_png.c	24;"	d	file:
+ERR_MAGIC_WRONG	mlx/mlx_png.c	25;"	d	file:
+ERR_MALLOC	mlx/mlx_png.c	36;"	d	file:
+ERR_STRUCT_CRC	mlx/mlx_png.c	29;"	d	file:
+ERR_STRUCT_DAT	mlx/mlx_png.c	31;"	d	file:
+ERR_STRUCT_END	mlx/mlx_png.c	28;"	d	file:
+ERR_STRUCT_HDR	mlx/mlx_png.c	27;"	d	file:
+ERR_STRUCT_INCIMPL	mlx/mlx_png.c	30;"	d	file:
+ERR_STRUCT_INCOMPLETE	mlx/mlx_png.c	26;"	d	file:
+ERR_STRUCT_MISSCHK	mlx/mlx_png.c	32;"	d	file:
+ERR_ZLIB	mlx/mlx_png.c	33;"	d	file:
+FONT_WIDTH	mlx/mlx_string_put.c	8;"	d	file:
+GET_NEXT_LINE_BONUS_H	libft/includes/get_next_line_bonus.h	13;"	d
 GREEN	Makefile	/^GREEN		=	\\033[0;32m$/;"	m
 GREEN	libft/Makefile	/^GREEN			=	\\033[0;32m$/;"	m
 GREEN	mlx/Makefile	/^GREEN=$'\\x1b[32m$/;"	m
@@ -52,14 +52,14 @@ INC	mlx/Makefile	/^INC=-I.$/;"	m
 INCLUDE_PATH	Makefile	/^INCLUDE_PATH	=.\/includes$/;"	m
 INCLUDE_PATH	libft/Makefile	/^INCLUDE_PATH	= .\/includes$/;"	m
 INCLUDE_PATH_BONUS	Makefile	/^INCLUDE_PATH_BONUS	=.\/includes_bonus$/;"	m
-LIBFTPRINTF_H	libft/includes/libftprintf.h	/^# define LIBFTPRINTF_H$/;"	d
-LIBFT_CHECKS_H	libft/includes/libft_checks.h	/^# define LIBFT_CHECKS_H$/;"	d
-LIBFT_CONVERSE_H	libft/includes/libft_converse.h	/^# define LIBFT_CONVERSE_H$/;"	d
-LIBFT_H	libft/includes/libft.h	/^# define LIBFT_H$/;"	d
-LIBFT_LIST_H	libft/includes/libft_list.h	/^# define LIBFT_LIST_H$/;"	d
-LIBFT_MEMORY_H	libft/includes/libft_memory.h	/^# define LIBFT_MEMORY_H$/;"	d
-LIBFT_PUTS_H	libft/includes/libft_puts.h	/^# define LIBFT_PUTS_H$/;"	d
-LIBFT_STRINGS_H	libft/includes/libft_strings.h	/^# define LIBFT_STRINGS_H$/;"	d
+LIBFTPRINTF_H	libft/includes/libftprintf.h	13;"	d
+LIBFT_CHECKS_H	libft/includes/libft_checks.h	13;"	d
+LIBFT_CONVERSE_H	libft/includes/libft_converse.h	13;"	d
+LIBFT_H	libft/includes/libft.h	14;"	d
+LIBFT_LIST_H	libft/includes/libft_list.h	13;"	d
+LIBFT_MEMORY_H	libft/includes/libft_memory.h	13;"	d
+LIBFT_PUTS_H	libft/includes/libft_puts.h	13;"	d
+LIBFT_STRINGS_H	libft/includes/libft_strings.h	13;"	d
 LIB_DIR	Makefile	/^LIB_DIR			= .\/libft\/includes\/$/;"	m
 LIGHT_BLUE	Makefile	/^LIGHT_BLUE	=	\\033[1;34m$/;"	m
 LIGHT_BLUE	libft/Makefile	/^LIGHT_BLUE		=	\\033[1;34m$/;"	m
@@ -78,10 +78,10 @@ MAKE_MLX	Makefile	/^MAKE_MLX		= mlx\/libmlx.a$/;"	m
 MD	Makefile	/^MD				= mkdir -p$/;"	m
 MKFL	Makefile	/^MKFL			= Makefile$/;"	m
 MKFL	libft/Makefile	/^MKFL			= Makefile$/;"	m
-MLX_H	mlx/mlx.h	/^#define	MLX_H$/;"	d
-MLX_SYNC_IMAGE_WRITABLE	mlx/mlx.h	/^#define MLX_SYNC_IMAGE_WRITABLE	/;"	d
-MLX_SYNC_WIN_CMD_COMPLETED	mlx/mlx.h	/^#define MLX_SYNC_WIN_CMD_COMPLETED	/;"	d
-MLX_SYNC_WIN_FLUSH_CMD	mlx/mlx.h	/^#define MLX_SYNC_WIN_FLUSH_CMD	/;"	d
+MLX_H	mlx/mlx.h	40;"	d
+MLX_SYNC_IMAGE_WRITABLE	mlx/mlx.h	144;"	d
+MLX_SYNC_WIN_CMD_COMPLETED	mlx/mlx.h	146;"	d
+MLX_SYNC_WIN_FLUSH_CMD	mlx/mlx.h	145;"	d
 MODULE_OBJ	mlx/Makefile	/^MODULE_OBJ=$(MODULE_SRC:.swift=.swiftmodule)$/;"	m
 MODULE_SRC	mlx/Makefile	/^MODULE_SRC= mlx_image.swift mlx_window.swift mlx_init.swift$/;"	m
 NAME	Makefile	/^NAME			= so_long $/;"	m
@@ -96,22 +96,22 @@ OBJS	libft/Makefile	/^OBJS 			= $(SOURCES:.c=.o)$/;"	m
 OBJS_BONUS	Makefile	/^OBJS_BONUS			=$(SOURCES_BONUS:.c=.o)$/;"	m
 ORANGE	Makefile	/^ORANGE		=	\\033[0;33m$/;"	m
 ORANGE	libft/Makefile	/^ORANGE			=	\\033[0;33m$/;"	m
-PNG_HDR_SIZE	mlx/mlx_png.c	/^#define PNG_HDR_SIZE	/;"	d	file:
-PNG_MAGIC_SIZE	mlx/mlx_png.c	/^#define	PNG_MAGIC_SIZE	/;"	d	file:
+PNG_HDR_SIZE	mlx/mlx_png.c	20;"	d	file:
+PNG_MAGIC_SIZE	mlx/mlx_png.c	18;"	d	file:
 PURPLE	Makefile	/^PURPLE		=	\\033[0;35m$/;"	m
 PURPLE	libft/Makefile	/^PURPLE			=	\\033[0;35m$/;"	m
 PURPLE	mlx/Makefile	/^PURPLE=$'\\x1b[35m$/;"	m
 RED	Makefile	/^RED	 		=	\\033[0;31m$/;"	m
 RED	libft/Makefile	/^RED				=	\\033[0;31m$/;"	m
 RED	mlx/Makefile	/^RED=$'\\x1b[31m$/;"	m
-RETURN	mlx/mlx_xpm.c	/^#define	RETURN	/;"	d	file:
+RETURN	mlx/mlx_xpm.c	30;"	d	file:
 REV	mlx/Makefile	/^REV=$'\\x1b[7m$/;"	m
 RM	Makefile	/^RM				= rm -rf$/;"	m
 RM	libft/Makefile	/^RM	 			= rm -f$/;"	m
-SO_LONG_H	includes/so_long.h	/^# define SO_LONG_H$/;"	d
+SO_LONG_H	includes/so_long.h	2;"	d
 SRC	mlx/Makefile	/^SRC= interface.swift $(MODULE_SRC)$/;"	m
 UNDER	mlx/Makefile	/^UNDER=$'\\x1b[4m$/;"	m
-UNIQ_BPP	mlx/mlx_png.c	/^#define UNIQ_BPP /;"	d	file:
+UNIQ_BPP	mlx/mlx_png.c	16;"	d	file:
 WHITE	Makefile	/^WHITE		=	\\033[1;37m$/;"	m
 WHITE	libft/Makefile	/^WHITE			=	\\033[1;37m$/;"	m
 WHITE	mlx/Makefile	/^WHITE=$'\\x1b[37m$/;"	m
@@ -119,9 +119,10 @@ X_FLAGS	Makefile	/^X_FLAGS			= -Lmlx -lmlx -framework OpenGL -framework AppKit$/
 YELLOW	Makefile	/^YELLOW		=	\\033[1;33m$/;"	m
 YELLOW	libft/Makefile	/^YELLOW			=	\\033[1;33m$/;"	m
 YELLOW	mlx/Makefile	/^YELLOW=$'\\x1b[33m$/;"	m
-Z_CHUNK	mlx/mlx_png.c	/^#define	Z_CHUNK	/;"	d	file:
+Z_CHUNK	mlx/mlx_png.c	22;"	d	file:
 bpp	mlx/mlx_png.c	/^  int		bpp;$/;"	m	struct:png_info_s	file:
 bytes_per_pixel	mlx/font.c	/^  unsigned int 	 bytes_per_pixel; \/* 2:RGB16, 3:RGB, 4:RGBA *\/ $/;"	m	struct:__anon1	file:
+chars	includes/so_long.h	/^	t_char	*chars;$/;"	m	struct:s_game
 col	mlx/mlx_xpm.c	/^  int           col;$/;"	m	struct:s_xpm_col	file:
 color	mlx/mlx_png.c	/^  int		color;$/;"	m	struct:png_info_s	file:
 color	mlx/mlx_xpm.c	/^  int   color;$/;"	m	struct:s_col_name	file:
@@ -136,7 +137,11 @@ ft_atoi_plus	libft/sources/converts/ft_atoi_plus.c	/^long	ft_atoi_plus(const cha
 ft_bzero	libft/sources/mem_edit/ft_bzero.c	/^void	ft_bzero(void *s, size_t n)$/;"	f
 ft_calloc	libft/sources/mem_edit/ft_calloc.c	/^void	*ft_calloc(size_t count, size_t size)$/;"	f
 ft_check_arg_atoi	libft/sources/converts/ft_atoi_plus.c	/^void	ft_check_arg_atoi(const char *str, int i)$/;"	f
+ft_check_char	sources/checker.c	/^static	int	ft_check_char(t_game *so_long)$/;"	f	file:
+ft_check_errors	sources/checker.c	/^void	ft_check_errors(t_game *so_long)$/;"	f
+ft_check_size_map	sources/checker.c	/^static	int	ft_check_size_map(t_game *so_long)$/;"	f	file:
 ft_convertx	libft/sources/converts/ft_convertx.c	/^int	ft_convertx(unsigned int num, int base, int mode)$/;"	f
+ft_count_chars	sources/ft_map.c	/^void	ft_count_chars(t_game *so_long)$/;"	f
 ft_countnbr	libft/sources/converts/ft_itoa.c	/^static	int	ft_countnbr(int n)$/;"	f	file:
 ft_doitoa	libft/sources/converts/ft_itoa.c	/^static	char	*ft_doitoa(int n, char *dest, int counter)$/;"	f	file:
 ft_domall	libft/sources/strings/ft_split.c	/^static char	**ft_domall(char *s, char c, char **dest)$/;"	f	file:
@@ -168,6 +173,7 @@ ft_memcpy	libft/sources/mem_edit/ft_memcpy.c	/^void	*ft_memcpy(void *dst, const 
 ft_memmove	libft/sources/mem_edit/ft_memmove.c	/^void	*ft_memmove(void *dst, const void *src, size_t len)$/;"	f
 ft_memset	libft/sources/mem_edit/ft_memset.c	/^void	*ft_memset(void *b, int c, size_t len)$/;"	f
 ft_newptr	libft/sources/lines/get_next_line_bonus.c	/^char	*ft_newptr(char *ptr)$/;"	f
+ft_print_stack	sources/print_stack.c	/^void	ft_print_stack(t_game *t)$/;"	f
 ft_printf	libft/sources/printf/ft_printf.c	/^int	ft_printf(char const *src, ...)$/;"	f
 ft_ptr	libft/sources/converts/ft_ptr.c	/^int	ft_ptr(unsigned long long strike, int nextbase)$/;"	f
 ft_putchar	libft/sources/puts/ft_putchar.c	/^int	ft_putchar(const char c)$/;"	f
@@ -247,16 +253,21 @@ mlx_xpm_file_to_image	mlx/mlx_xpm.c	/^void	*mlx_xpm_file_to_image(void *xvar,cha
 mlx_xpm_to_image	mlx/mlx_xpm.c	/^void	*mlx_xpm_to_image(void *xvar,char **xpm_data,int *width,int *height)$/;"	f
 name	mlx/mlx_xpm.c	/^  char  *name;$/;"	m	struct:s_col_name	file:
 name	mlx/mlx_xpm.c	/^  int           name;$/;"	m	struct:s_xpm_col	file:
+nc	includes/so_long.h	/^	int	nc;$/;"	m	struct:s_char
+ne	includes/so_long.h	/^	int	ne;$/;"	m	struct:s_char
 next	libft/includes/libft_list.h	/^	struct s_list	*next;$/;"	m	struct:s_list	typeref:struct:s_list::s_list
+np	includes/so_long.h	/^	int	np;$/;"	m	struct:s_char
 pixel_data	mlx/font.c	/^  unsigned char	 pixel_data[1140 * 20 * 4 + 1];$/;"	m	struct:__anon1	file:
 png_info_s	mlx/mlx_png.c	/^typedef struct png_info_s$/;"	s	file:
 png_info_t	mlx/mlx_png.c	/^} png_info_t;$/;"	t	typeref:struct:png_info_s	file:
+s_char	includes/so_long.h	/^typedef struct	s_char {$/;"	s
 s_col_name	mlx/mlx_xpm.c	/^struct  s_col_name$/;"	s	file:
 s_game	includes/so_long.h	/^typedef	struct s_game {$/;"	s
 s_img	includes/so_long.h	/^typedef	struct	s_img {$/;"	s
 s_list	libft/includes/libft_list.h	/^typedef struct s_list$/;"	s
 s_xpm_col	mlx/mlx_xpm.c	/^typedef struct  s_xpm_col$/;"	s	file:
 src_lenght	libft/sources/strings/ft_strlcpy.c	/^static size_t	src_lenght(const char *src)$/;"	f	file:
+t_char	includes/so_long.h	/^}	t_char;$/;"	t	typeref:struct:s_char
 t_game	includes/so_long.h	/^}	t_game;$/;"	t	typeref:struct:s_game
 t_img	includes/so_long.h	/^}	t_img;$/;"	t	typeref:struct:s_img
 t_list	libft/includes/libft_list.h	/^}	t_list;$/;"	t	typeref:struct:s_list

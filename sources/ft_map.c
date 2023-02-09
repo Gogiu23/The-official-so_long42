@@ -6,7 +6,7 @@
 /*   By: gdominic <gdominic@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 12:22:01 by gdominic          #+#    #+#             */
-/*   Updated: 2023/02/03 12:28:12 by gdominic         ###   ########.fr       */
+/*   Updated: 2023/02/09 14:20:05 by gdominic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,3 +62,27 @@ void	ft_fitoar(t_game *so_long, int fd)
 	so_long->matrix[i] = NULL;
 	close(fd);
 }
+
+void	ft_count_chars(t_game *so_long)
+{
+	int	a;
+	int	b;
+
+	a = 0;
+	while (so_long->matrix[a])
+	{
+		b = 0;
+		while (so_long->matrix[a][b])
+		{
+			if (so_long->matrix[a][b] == 'P')
+				so_long->chars->np++;
+			else if (so_long->matrix[a][b] == 'E')
+				so_long->chars->ne++;
+			else if (so_long->matrix[a][b] == 'C')
+				so_long->chars->nc++;
+			b++;
+		}
+		a++;
+	}
+}
+
