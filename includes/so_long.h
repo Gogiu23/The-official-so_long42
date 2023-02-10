@@ -27,6 +27,7 @@ typedef	struct s_game {
 	void	*img;
 	void	*win;
 	char	*map;
+	int		map_first_line;
 	int		map_height;// altura of the map //
 	int		map_width;// anchura del mapa //
 	char	**matrix;
@@ -45,6 +46,7 @@ void	ft_fitoar(t_game *so_long, int fd);
 
 //Check errors
 void	ft_check_errors(t_game *so_long);
+int 	ft_no_limits(t_game *so_long);
 
 //Counting chars
 void	ft_count_chars(t_game *so_long);

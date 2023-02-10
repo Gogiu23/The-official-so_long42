@@ -6,7 +6,7 @@
 /*   By: gdominic <gdominic@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 12:22:01 by gdominic          #+#    #+#             */
-/*   Updated: 2023/02/09 20:04:17 by gdominic         ###   ########.fr       */
+/*   Updated: 2023/02/10 13:39:46 by gdominic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,22 @@
 
 void	ft_get_size_map(t_game *so_long, int fd, char *argv[])
 {
+	int	bol;
+
+	bol = 0;
 	while (1)
 	{
 		so_long->map = get_next_line(fd);
 		if (!so_long->map)
 			break;
+		if (bol == 0)
+		{
+			so_long->map_first_line = ft_strlen(so_long->map) - 1;
+			bol++;
+		}
 		so_long->map_width = ft_strlen(so_long->map) - 1;
-		ft_printf("%p\n", so_long->map);
+		if (so_long->map_width != so_long->map_first_line)
+			ft_putstr_error("Invalid size of the map\n");
 		free(so_long->map);
 		so_long->map_height++;
 	}
@@ -38,7 +47,7 @@ void	ft_fitoar(t_game *so_long, int fd)
 
 	i = 0;
 	so_long->map = get_next_line(fd);
-	so_long->matrix = (char **)malloc(sizeof(char *) * so_long->map_height + 1);
+	so_long->matrix = (char **)malloc(sizeof(char *) * so_long->map_height);
 	if (!so_long->matrix)
 		exit (EXIT_FAILURE);
 	ft_printf("so_long->map_height: %d\n", so_long->map_height);
@@ -61,6 +70,7 @@ void	ft_fitoar(t_game *so_long, int fd)
 		i++;
 	}
 	so_long->matrix[i] = NULL;
+//	ft_printf("aqui\n");
 	close(fd);
 }
 
@@ -86,4 +96,3 @@ void	ft_count_chars(t_game *so_long)
 		a++;
 	}
 }
-
