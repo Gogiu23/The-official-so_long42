@@ -6,13 +6,24 @@
 /*   By: gdominic <gdominic@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 09:12:15 by gdominic          #+#    #+#             */
-/*   Updated: 2023/02/10 13:42:32 by gdominic         ###   ########.fr       */
+/*   Updated: 2023/02/23 19:12:51 by gdominic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/so_long.h"
 #include "../libft/includes/libft.h"
 #include "../mlx/mlx.h"
+
+static	int ft_check_path(t_game *so_long)
+{
+	int	a;
+
+	a = 0;
+	ft_copy_map(so_long);
+	ft_find_player(so_long);
+//	ft_printf("so_long->almatrix: %s\n", so_long->almatrix[a]);
+	return (1);
+}
 
 static	int	ft_find_diff_chars(t_game *so_long)
 {
@@ -77,5 +88,6 @@ void	ft_check_errors(t_game *so_long)
 		ft_putstr_error("Invalid chars presents in the map\n");
 	if (ft_no_limits(so_long) == 0)
 		ft_putstr_error("The outside map limits are not the corrects ones\n");
+	if (ft_check_path(so_long) == 0)
+		ft_putstr_error("There is no exit available\n");
 }
-

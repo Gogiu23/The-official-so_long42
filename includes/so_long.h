@@ -9,11 +9,13 @@
 # include <sys/uio.h>
 
 /*
+ * pl = player position [1] = X; [2] = Y;
  * np = number player;
  * nc = number collectables;
  * ne = number exit;
  */
 typedef struct	s_char {
+	int	pl[2];
 	int	np;
 	int	nc;
 	int	ne;
@@ -31,6 +33,7 @@ typedef	struct s_game {
 	int		map_height;// altura of the map //
 	int		map_width;// anchura del mapa //
 	char	**matrix;
+	char	**almatrix;
 	t_img	*imgs;
 	t_char	*chars;
 }	t_game;
@@ -43,6 +46,7 @@ void	ft_init_variables_struct(t_game *so_long);
 //Map handler
 void	ft_get_size_map(t_game *so_long, int fd, char *argv[]);
 void	ft_fitoar(t_game *so_long, int fd);
+void	ft_copy_map(t_game *so_long);
 
 //Check errors
 void	ft_check_errors(t_game *so_long);
@@ -56,6 +60,9 @@ void	ft_print_stack(t_game *t);
 
 //Free and cleaning all leaks
 void	ft_free(t_game *so_long);
+
+//Find Player
+void	ft_find_player(t_game *so_long);
 
 # endif
 

@@ -6,7 +6,7 @@
 /*   By: gdominic <gdominic@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 12:22:01 by gdominic          #+#    #+#             */
-/*   Updated: 2023/02/10 13:39:46 by gdominic         ###   ########.fr       */
+/*   Updated: 2023/02/23 17:33:34 by gdominic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,6 +91,45 @@ void	ft_count_chars(t_game *so_long)
 				so_long->chars->ne++;
 			else if (so_long->matrix[a][b] == 'C')
 				so_long->chars->nc++;
+			b++;
+		}
+		a++;
+	}
+}
+
+void	ft_copy_map(t_game *so_long)
+{
+	int	i;
+//	int	s;
+
+	i = 0;
+	so_long->almatrix = (char **)ft_calloc(sizeof(char *) * so_long->map_height, 1);
+	if (!so_long->almatrix)
+		exit (EXIT_FAILURE);
+	while (so_long->matrix[i])
+	{
+		so_long->almatrix[i] = ft_strdup(so_long->matrix[i]);
+		i++;
+	}
+	so_long->almatrix[i] = NULL;
+}
+
+void	ft_find_player(t_game *so_long)
+{
+	int	a;
+	int	b;
+
+	a = 0;
+	while (so_long->matrix[a])
+	{
+		b = 0;
+		while (so_long->matrix[a][b])
+		{
+			if (so_long->matrix[a][b] == 'P')
+			{
+				so_long->chars->pl[0] = b;
+				so_long->chars->pl[1] = a;
+			}
 			b++;
 		}
 		a++;
