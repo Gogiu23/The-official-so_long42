@@ -8,6 +8,8 @@
 # include <sys/types.h>
 # include <sys/uio.h>
 
+# define PXS 50
+
 /*
  * pl = player position [1] = X; [2] = Y;
  * np = number player;
@@ -22,6 +24,11 @@ typedef struct	s_char {
 }	t_char;
 
 typedef	struct	s_img {
+	void	*player[2];
+	void	*wall[1];
+	void	*ground[1];
+	void	*collectable[1];
+	void	*exit[2];
 }	t_img;
 
 typedef	struct s_game {
@@ -63,6 +70,21 @@ void	ft_free(t_game *so_long);
 
 //Find Player
 void	ft_find_player(t_game *so_long);
+
+//Create mallocs for images
+void	ft_load_images(t_game *so_long);
+
+//Printers
+void	ft_put_img(t_game *so_long, void *img, int a, int b);
+void	ft_print_walls(t_game *so_long);
+void	ft_print_background(t_game *so_long);
+void	ft_print_collectable(t_game *so_long);
+void	ft_print_player(t_game *so_long);
+void	ft_print_exit(t_game *so_long);
+
+//End game
+void	ft_destroy_game(t_game *so_long);
+
 
 # endif
 

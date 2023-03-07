@@ -6,7 +6,7 @@
 /*   By: gdominic <gdominic@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 12:22:01 by gdominic          #+#    #+#             */
-/*   Updated: 2023/02/23 17:33:34 by gdominic         ###   ########.fr       */
+/*   Updated: 2023/03/07 20:51:12 by gdominic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -127,8 +127,8 @@ void	ft_find_player(t_game *so_long)
 		{
 			if (so_long->matrix[a][b] == 'P')
 			{
-				so_long->chars->pl[0] = b;
-				so_long->chars->pl[1] = a;
+				so_long->chars->pl[0] = a;
+				so_long->chars->pl[1] = b;
 			}
 			b++;
 		}

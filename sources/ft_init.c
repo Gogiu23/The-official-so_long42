@@ -6,7 +6,7 @@
 /*   By: gdominic <gdominic@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 20:42:42 by gdominic          #+#    #+#             */
-/*   Updated: 2023/02/23 17:28:03 by gdominic         ###   ########.fr       */
+/*   Updated: 2023/03/07 17:08:58 by gdominic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ t_game	*ft_init_game(void)
 
 	so_long = ft_init_struct();
 	ft_init_variables_struct(so_long);
+	so_long->mlx = mlx_init();
+	ft_load_images(so_long);
 	return (so_long);
 }
 

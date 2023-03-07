@@ -1,10 +1,125 @@
+	last.vim	/^nnoremap  :Files$/;"	m
+	last.vim	/^nnoremap  :vertical resize +2$/;"	m
+		last.vim	/^inoremap <expr> 	 pumvisible() ? "\\" : "\\	"$/;"	m
+	last.vim	/^nnoremap   :NERDTreeToggle$/;"	m
+	last.vim	/^nnoremap  :resize +2$/;"	m
+	last.vim	/^nnoremap <buffer> <silent>  :call nerdtree#ui_glue#invokeKeyMap("<C-k>")$/;"	m
+	last.vim	/^nnoremap  :vertical resize -2$/;"	m
+	last.vim	/^nnoremap <buffer> <silent> $/;"	m
+	last.vim	/^nnoremap  :bd$/;"	m
+	last.vim	/^nnoremap  :w$/;"	m
+	last.vim	/^nnoremap  :wqa$/;"	m
+	last.vim	/^inoremap  <Nop>$/;"	m
 !_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
 !_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
 !_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
+,c	last.vim	/^nnoremap ,c :normal Hxxj$/;"	m
+0	last.vim	/^normal! 0$/;"	m
+010|	last.vim	/^normal! 010|$/;"	m
+012|	last.vim	/^normal! 012|$/;"	m
+016|	last.vim	/^normal! 016|$/;"	m
+033|	last.vim	/^normal! 033|$/;"	m
+09|	last.vim	/^normal! 09|$/;"	m
+<2-LeftMouse>	last.vim	/^nnoremap <buffer> <silent> <2-LeftMouse> :call nerdtree#ui_glue#invokeKeyMap("<2-LeftMouse>")$/;"	m
+<BS>	last.vim	/^vmap <BS> "-d$/;"	m
+<C-F>	last.vim	/^nnoremap <C-F> :Files$/;"	m
+<C-H>	last.vim	/^nnoremap <C-H> :vertical resize +2$/;"	m
+<C-J>	last.vim	/^nnoremap <C-J> :resize -2$/;"	m
+<C-J>	last.vim	/^nnoremap <buffer> <silent> <C-J> :call nerdtree#ui_glue#invokeKeyMap("<C-j>")$/;"	m
+<C-K>	last.vim	/^nnoremap <C-K> :resize +2$/;"	m
+<C-K>	last.vim	/^nnoremap <buffer> <silent> <C-K> :call nerdtree#ui_glue#invokeKeyMap("<C-k>")$/;"	m
+<C-L>	last.vim	/^nnoremap <C-L> :vertical resize -2$/;"	m
+<C-Q>	last.vim	/^nnoremap <C-Q> :bd$/;"	m
+<C-S>	last.vim	/^nnoremap <C-S> :w$/;"	m
+<C-Z>	last.vim	/^nnoremap <C-Z> :wqa$/;"	m
+<D-c>	last.vim	/^vmap <D-c> "*y$/;"	m
+<D-v>	last.vim	/^map! <D-v> *$/;"	m
+<D-v>	last.vim	/^nmap <D-v> "*P$/;"	m
+<D-v>	last.vim	/^vmap <D-v> "-d"*P$/;"	m
+<D-x>	last.vim	/^vmap <D-x> "*d$/;"	m
+<Down>	last.vim	/^inoremap <expr> <Down> pumvisible() ? "\\" : "\\<Down>"$/;"	m
+<Down>	last.vim	/^noremap <Down> <Nop>$/;"	m
+<F1>	last.vim	/^map <F1> :Stdheader$/;"	m
+<F7>	last.vim	/^nnoremap <silent> <F7> :FloatermNew$/;"	m
+<F8>	last.vim	/^nnoremap <silent> <F8> :FloatermPrev$/;"	m
+<F9>	last.vim	/^nnoremap <silent> <F9> :FloatermNext$/;"	m
+<Left>	last.vim	/^noremap <Left> <Nop>$/;"	m
+<LeftRelease>	last.vim	/^nnoremap <buffer> <silent> <LeftRelease> <LeftRelease>:call nerdtree#ui_glue#invokeKeyMap("<LeftRelease>")$/;"	m
+<MiddleMouse>	last.vim	/^nnoremap <buffer> <silent> <MiddleMouse> :call nerdtree#ui_glue#invokeKeyMap("<MiddleMouse>")$/;"	m
+<NL>	last.vim	/^nnoremap <NL> :resize -2$/;"	m
+<NL>	last.vim	/^nnoremap <buffer> <silent> <NL> :call nerdtree#ui_glue#invokeKeyMap("<C-j>")$/;"	m
+<Nul>	last.vim	/^imap <Nul> <C-Space>$/;"	m
+<Plug>(YCMFindSymbolInDocument)	last.vim	/^nnoremap <silent> <Plug>(YCMFindSymbolInDocument) :call youcompleteme#finder#FindSymbol( 'document' )$/;"	m
+<Plug>(YCMFindSymbolInWorkspace)	last.vim	/^nnoremap <silent> <Plug>(YCMFindSymbolInWorkspace) :call youcompleteme#finder#FindSymbol( 'workspace' )$/;"	m
+<Plug>(ale_code_action)	last.vim	/^nnoremap <silent> <Plug>(ale_code_action) :ALECodeAction$/;"	m
+<Plug>(ale_complete)	last.vim	/^inoremap <silent> <Plug>(ale_complete) :ALEComplete$/;"	m
+<Plug>(ale_detail)	last.vim	/^nnoremap <silent> <Plug>(ale_detail) :ALEDetail$/;"	m
+<Plug>(ale_disable)	last.vim	/^nnoremap <silent> <Plug>(ale_disable) :ALEDisable$/;"	m
+<Plug>(ale_disable_buffer)	last.vim	/^nnoremap <silent> <Plug>(ale_disable_buffer) :ALEDisableBuffer$/;"	m
+<Plug>(ale_documentation)	last.vim	/^nnoremap <silent> <Plug>(ale_documentation) :ALEDocumentation$/;"	m
+<Plug>(ale_enable)	last.vim	/^nnoremap <silent> <Plug>(ale_enable) :ALEEnable$/;"	m
+<Plug>(ale_enable_buffer)	last.vim	/^nnoremap <silent> <Plug>(ale_enable_buffer) :ALEEnableBuffer$/;"	m
+<Plug>(ale_filerename)	last.vim	/^nnoremap <silent> <Plug>(ale_filerename) :ALEFileRename$/;"	m
+<Plug>(ale_find_references)	last.vim	/^nnoremap <silent> <Plug>(ale_find_references) :ALEFindReferences$/;"	m
+<Plug>(ale_first)	last.vim	/^nnoremap <silent> <Plug>(ale_first) :ALEFirst$/;"	m
+<Plug>(ale_fix)	last.vim	/^nnoremap <silent> <Plug>(ale_fix) :ALEFix$/;"	m
+<Plug>(ale_go_to_definition)	last.vim	/^nnoremap <silent> <Plug>(ale_go_to_definition) :ALEGoToDefinition$/;"	m
+<Plug>(ale_go_to_definition_in_split)	last.vim	/^nnoremap <silent> <Plug>(ale_go_to_definition_in_split) :ALEGoToDefinition -split$/;"	m
+<Plug>(ale_go_to_definition_in_tab)	last.vim	/^nnoremap <silent> <Plug>(ale_go_to_definition_in_tab) :ALEGoToDefinition -tab$/;"	m
+<Plug>(ale_go_to_definition_in_vsplit)	last.vim	/^nnoremap <silent> <Plug>(ale_go_to_definition_in_vsplit) :ALEGoToDefinition -vsplit$/;"	m
+<Plug>(ale_go_to_implementation)	last.vim	/^nnoremap <silent> <Plug>(ale_go_to_implementation) :ALEGoToImplementation$/;"	m
+<Plug>(ale_go_to_implementation_in_split)	last.vim	/^nnoremap <silent> <Plug>(ale_go_to_implementation_in_split) :ALEGoToImplementation -split$/;"	m
+<Plug>(ale_go_to_implementation_in_tab)	last.vim	/^nnoremap <silent> <Plug>(ale_go_to_implementation_in_tab) :ALEGoToImplementation -tab$/;"	m
+<Plug>(ale_go_to_implementation_in_vsplit)	last.vim	/^nnoremap <silent> <Plug>(ale_go_to_implementation_in_vsplit) :ALEGoToImplementation -vsplit$/;"	m
+<Plug>(ale_go_to_type_definition)	last.vim	/^nnoremap <silent> <Plug>(ale_go_to_type_definition) :ALEGoToTypeDefinition$/;"	m
+<Plug>(ale_go_to_type_definition_in_split)	last.vim	/^nnoremap <silent> <Plug>(ale_go_to_type_definition_in_split) :ALEGoToTypeDefinition -split$/;"	m
+<Plug>(ale_go_to_type_definition_in_tab)	last.vim	/^nnoremap <silent> <Plug>(ale_go_to_type_definition_in_tab) :ALEGoToTypeDefinition -tab$/;"	m
+<Plug>(ale_go_to_type_definition_in_vsplit)	last.vim	/^nnoremap <silent> <Plug>(ale_go_to_type_definition_in_vsplit) :ALEGoToTypeDefinition -vsplit$/;"	m
+<Plug>(ale_hover)	last.vim	/^nnoremap <silent> <Plug>(ale_hover) :ALEHover$/;"	m
+<Plug>(ale_import)	last.vim	/^nnoremap <silent> <Plug>(ale_import) :ALEImport$/;"	m
+<Plug>(ale_last)	last.vim	/^nnoremap <silent> <Plug>(ale_last) :ALELast$/;"	m
+<Plug>(ale_lint)	last.vim	/^nnoremap <silent> <Plug>(ale_lint) :ALELint$/;"	m
+<Plug>(ale_next)	last.vim	/^nnoremap <silent> <Plug>(ale_next) :ALENext$/;"	m
+<Plug>(ale_next_error)	last.vim	/^nnoremap <silent> <Plug>(ale_next_error) :ALENext -error$/;"	m
+<Plug>(ale_next_warning)	last.vim	/^nnoremap <silent> <Plug>(ale_next_warning) :ALENext -warning$/;"	m
+<Plug>(ale_next_wrap)	last.vim	/^nnoremap <silent> <Plug>(ale_next_wrap) :ALENextWrap$/;"	m
+<Plug>(ale_next_wrap_error)	last.vim	/^nnoremap <silent> <Plug>(ale_next_wrap_error) :ALENext -wrap -error$/;"	m
+<Plug>(ale_next_wrap_warning)	last.vim	/^nnoremap <silent> <Plug>(ale_next_wrap_warning) :ALENext -wrap -warning$/;"	m
+<Plug>(ale_previous)	last.vim	/^nnoremap <silent> <Plug>(ale_previous) :ALEPrevious$/;"	m
+<Plug>(ale_previous_error)	last.vim	/^nnoremap <silent> <Plug>(ale_previous_error) :ALEPrevious -error$/;"	m
+<Plug>(ale_previous_warning)	last.vim	/^nnoremap <silent> <Plug>(ale_previous_warning) :ALEPrevious -warning$/;"	m
+<Plug>(ale_previous_wrap)	last.vim	/^nnoremap <silent> <Plug>(ale_previous_wrap) :ALEPreviousWrap$/;"	m
+<Plug>(ale_previous_wrap_error)	last.vim	/^nnoremap <silent> <Plug>(ale_previous_wrap_error) :ALEPrevious -wrap -error$/;"	m
+<Plug>(ale_previous_wrap_warning)	last.vim	/^nnoremap <silent> <Plug>(ale_previous_wrap_warning) :ALEPrevious -wrap -warning$/;"	m
+<Plug>(ale_rename)	last.vim	/^nnoremap <silent> <Plug>(ale_rename) :ALERename$/;"	m
+<Plug>(ale_repeat_selection)	last.vim	/^nnoremap <silent> <Plug>(ale_repeat_selection) :ALERepeatSelection$/;"	m
+<Plug>(ale_reset)	last.vim	/^nnoremap <silent> <Plug>(ale_reset) :ALEReset$/;"	m
+<Plug>(ale_reset_buffer)	last.vim	/^nnoremap <silent> <Plug>(ale_reset_buffer) :ALEResetBuffer$/;"	m
+<Plug>(ale_toggle)	last.vim	/^nnoremap <silent> <Plug>(ale_toggle) :ALEToggle$/;"	m
+<Plug>(ale_toggle_buffer)	last.vim	/^nnoremap <silent> <Plug>(ale_toggle_buffer) :ALEToggleBuffer$/;"	m
+<Plug>(fzf-complete-buffer-line)	last.vim	/^inoremap <expr> <Plug>(fzf-complete-buffer-line) fzf#vim#complete#buffer_line()$/;"	m
+<Plug>(fzf-complete-file)	last.vim	/^inoremap <expr> <Plug>(fzf-complete-file) fzf#vim#complete#path("find . -path '*\/\\.*' -prune -o -type f -print -o -type l -print | sed 's:^..::'")$/;"	m
+<Plug>(fzf-complete-file-ag)	last.vim	/^inoremap <expr> <Plug>(fzf-complete-file-ag) fzf#vim#complete#path('ag -l -g ""')$/;"	m
+<Plug>(fzf-complete-line)	last.vim	/^inoremap <expr> <Plug>(fzf-complete-line) fzf#vim#complete#line()$/;"	m
+<Plug>(fzf-complete-path)	last.vim	/^inoremap <expr> <Plug>(fzf-complete-path) fzf#vim#complete#path("find . -path '*\/\\.*' -prune -o -print | sed '1d;s:^..::'")$/;"	m
+<Plug>(fzf-complete-word)	last.vim	/^inoremap <expr> <Plug>(fzf-complete-word) fzf#vim#complete#word()$/;"	m
+<Plug>(fzf-insert)	last.vim	/^nnoremap <silent> <Plug>(fzf-insert) i$/;"	m
+<Plug>(fzf-maps-i)	last.vim	/^inoremap <silent> <Plug>(fzf-maps-i) :call fzf#vim#maps('i', 0)$/;"	m
+<Plug>(fzf-maps-n)	last.vim	/^nnoremap <silent> <Plug>(fzf-maps-n) :call fzf#vim#maps('n', 0)$/;"	m
+<Plug>(fzf-maps-o)	last.vim	/^onoremap <silent> <Plug>(fzf-maps-o) :call fzf#vim#maps('o', 0)$/;"	m
+<Plug>(fzf-normal)	last.vim	/^nnoremap <silent> <Plug>(fzf-normal) <Nop>$/;"	m
+<Plug>NetrwBrowseX	last.vim	/^nnoremap <silent> <Plug>NetrwBrowseX :call netrw#BrowseX(netrw#GX(),netrw#CheckIfRemote(netrw#GX()))$/;"	m
+<Right>	last.vim	/^noremap <Right> <Nop>$/;"	m
+<S-Tab>	last.vim	/^inoremap <expr> <S-Tab> pumvisible() ? "\\" : "\\<S-Tab>"$/;"	m
+<Up>	last.vim	/^inoremap <expr> <Up> pumvisible() ? "\\" : "\\<Up>"$/;"	m
+<Up>	last.vim	/^noremap <Up> <Nop>$/;"	m
+?	last.vim	/^nnoremap <buffer> <silent> ? :call nerdtree#ui_glue#invokeKeyMap("?")$/;"	m
+A	last.vim	/^nnoremap <buffer> <silent> A :call nerdtree#ui_glue#invokeKeyMap("A")$/;"	m
 ATLAS_NB_CHAR	mlx/mlx_string_put.c	6;"	d	file:
+B	last.vim	/^nnoremap <buffer> <silent> B :call nerdtree#ui_glue#invokeKeyMap("B")$/;"	m
 BLACK	Makefile	/^BLACK		=   \\034[0;30m$/;"	m
 BLACK	libft/Makefile	/^BLACK			=	\\033[0;30m$/;"	m
 BLUE	Makefile	/^BLUE		=	\\033[0;34m$/;"	m
@@ -12,8 +127,10 @@ BLUE	libft/Makefile	/^BLUE			=	\\033[0;34m$/;"	m
 BLUE	mlx/Makefile	/^BLUE=$'\\x1b[34m$/;"	m
 BOLD	mlx/Makefile	/^BOLD=$'\\x1b[1m$/;"	m
 BUFFER_SIZE	libft/includes/get_next_line_bonus.h	16;"	d
+C	last.vim	/^nnoremap <buffer> <silent> C :call nerdtree#ui_glue#invokeKeyMap("C")$/;"	m
 CC	Makefile	/^CC				= gcc$/;"	m
 CC	libft/Makefile	/^CC 				= gcc$/;"	m
+CD	last.vim	/^nnoremap <buffer> <silent> CD :call nerdtree#ui_glue#invokeKeyMap("CD")$/;"	m
 CFLAGS	Makefile	/^CFLAGS			= -Wall -Wextra -Werror -g -MMD$/;"	m
 CFLAGS	libft/Makefile	/^CFLAGS 			= -Wall -Wextra -Werror -O3 -Ofast -flto=thin -ffast-math$/;"	m
 CFLAGS	mlx/Makefile	/^CFLAGS=-O3 -w$/;"	m
@@ -22,6 +139,7 @@ CYAN	libft/Makefile	/^CYAN			=	\\033[0;36m$/;"	m
 CYAN	mlx/Makefile	/^CYAN=$'\\x1b[36m$/;"	m
 C_OBJ	mlx/Makefile	/^C_OBJ=$(C_SRC:.c=.o)$/;"	m
 C_SRC	mlx/Makefile	/^C_SRC= mlx_xpm.c mlx_png.c mlx_string_put.c$/;"	m
+D	last.vim	/^nnoremap <buffer> <silent> D :call nerdtree#ui_glue#invokeKeyMap("D")$/;"	m
 DARK_GRAY	Makefile	/^DARK_GRAY	=	\\033[1;30m$/;"	m
 DARK_GRAY	libft/Makefile	/^DARK_GRAY		=	\\033[1;30m$/;"	m
 DEPS	Makefile	/^DEPS			=$(SOURCES:.c=.d)$/;"	m
@@ -42,16 +160,24 @@ ERR_STRUCT_INCIMPL	mlx/mlx_png.c	30;"	d	file:
 ERR_STRUCT_INCOMPLETE	mlx/mlx_png.c	26;"	d	file:
 ERR_STRUCT_MISSCHK	mlx/mlx_png.c	32;"	d	file:
 ERR_ZLIB	mlx/mlx_png.c	33;"	d	file:
+F	last.vim	/^nnoremap <buffer> <silent> F :call nerdtree#ui_glue#invokeKeyMap("F")$/;"	m
 FONT_WIDTH	mlx/mlx_string_put.c	8;"	d	file:
 GET_NEXT_LINE_BONUS_H	libft/includes/get_next_line_bonus.h	13;"	d
 GREEN	Makefile	/^GREEN		=	\\033[0;32m$/;"	m
 GREEN	libft/Makefile	/^GREEN			=	\\033[0;32m$/;"	m
 GREEN	mlx/Makefile	/^GREEN=$'\\x1b[32m$/;"	m
 GREY	mlx/Makefile	/^GREY=$'\\x1b[30m$/;"	m
+H	last.vim	/^nnoremap H <Home>$/;"	m
+I	last.vim	/^nnoremap <buffer> <silent> I :call nerdtree#ui_glue#invokeKeyMap("I")$/;"	m
 INC	mlx/Makefile	/^INC=-I.$/;"	m
 INCLUDE_PATH	Makefile	/^INCLUDE_PATH	=.\/includes$/;"	m
 INCLUDE_PATH	libft/Makefile	/^INCLUDE_PATH	= .\/includes$/;"	m
 INCLUDE_PATH_BONUS	Makefile	/^INCLUDE_PATH_BONUS	=.\/includes_bonus$/;"	m
+J	last.vim	/^nnoremap <buffer> <silent> J :call nerdtree#ui_glue#invokeKeyMap("J")$/;"	m
+J	last.vim	/^vnoremap J :m '>+1$/;"	m
+K	last.vim	/^nnoremap <buffer> <silent> K :call nerdtree#ui_glue#invokeKeyMap("K")$/;"	m
+K	last.vim	/^vnoremap K :m '<-2$/;"	m
+L	last.vim	/^nnoremap L <End>$/;"	m
 LIBFTPRINTF_H	libft/includes/libftprintf.h	13;"	d
 LIBFT_CHECKS_H	libft/includes/libft_checks.h	13;"	d
 LIBFT_CONVERSE_H	libft/includes/libft_converse.h	13;"	d
@@ -90,17 +216,21 @@ NAME	mlx/Makefile	/^NAME=libmlx.dylib$/;"	m
 NAME_BONUS	Makefile	/^NAME_BONUS			= $/;"	m
 NO_COLOR	Makefile	/^NO_COLOR	=	\\033[0m$/;"	m
 NO_COLOR	libft/Makefile	/^NO_COLOR		=	\\033[0m$/;"	m
+O	last.vim	/^nnoremap <buffer> <silent> O :call nerdtree#ui_glue#invokeKeyMap("O")$/;"	m
 OBJ	mlx/Makefile	/^OBJ=$(SRC:.swift=.o)$/;"	m
 OBJS	Makefile	/^OBJS			=$(SOURCES:.c=.o)$/;"	m
 OBJS	libft/Makefile	/^OBJS 			= $(SOURCES:.c=.o)$/;"	m
 OBJS_BONUS	Makefile	/^OBJS_BONUS			=$(SOURCES_BONUS:.c=.o)$/;"	m
 ORANGE	Makefile	/^ORANGE		=	\\033[0;33m$/;"	m
 ORANGE	libft/Makefile	/^ORANGE			=	\\033[0;33m$/;"	m
+P	last.vim	/^nnoremap <buffer> <silent> P :call nerdtree#ui_glue#invokeKeyMap("P")$/;"	m
 PNG_HDR_SIZE	mlx/mlx_png.c	20;"	d	file:
 PNG_MAGIC_SIZE	mlx/mlx_png.c	18;"	d	file:
 PURPLE	Makefile	/^PURPLE		=	\\033[0;35m$/;"	m
 PURPLE	libft/Makefile	/^PURPLE			=	\\033[0;35m$/;"	m
 PURPLE	mlx/Makefile	/^PURPLE=$'\\x1b[35m$/;"	m
+PXS	includes/so_long.h	11;"	d
+R	last.vim	/^nnoremap <buffer> <silent> R :call nerdtree#ui_glue#invokeKeyMap("R")$/;"	m
 RED	Makefile	/^RED	 		=	\\033[0;31m$/;"	m
 RED	libft/Makefile	/^RED				=	\\033[0;31m$/;"	m
 RED	mlx/Makefile	/^RED=$'\\x1b[31m$/;"	m
@@ -110,43 +240,80 @@ RM	Makefile	/^RM				= rm -rf$/;"	m
 RM	libft/Makefile	/^RM	 			= rm -f$/;"	m
 SO_LONG_H	includes/so_long.h	2;"	d
 SRC	mlx/Makefile	/^SRC= interface.swift $(MODULE_SRC)$/;"	m
+SessionLoad	last.vim	/^let SessionLoad = 1$/;"	v
+T	last.vim	/^nnoremap <buffer> <silent> T :call nerdtree#ui_glue#invokeKeyMap("T")$/;"	m
+U	last.vim	/^nnoremap <buffer> <silent> U :call nerdtree#ui_glue#invokeKeyMap("U")$/;"	m
 UNDER	mlx/Makefile	/^UNDER=$'\\x1b[4m$/;"	m
 UNIQ_BPP	mlx/mlx_png.c	16;"	d	file:
 WHITE	Makefile	/^WHITE		=	\\033[1;37m$/;"	m
 WHITE	libft/Makefile	/^WHITE			=	\\033[1;37m$/;"	m
 WHITE	mlx/Makefile	/^WHITE=$'\\x1b[37m$/;"	m
+X	last.vim	/^nnoremap <buffer> <silent> X :call nerdtree#ui_glue#invokeKeyMap("X")$/;"	m
 X_FLAGS	Makefile	/^X_FLAGS			= -Lmlx -lmlx -framework OpenGL -framework AppKit$/;"	m
 YELLOW	Makefile	/^YELLOW		=	\\033[1;33m$/;"	m
 YELLOW	libft/Makefile	/^YELLOW			=	\\033[1;33m$/;"	m
 YELLOW	mlx/Makefile	/^YELLOW=$'\\x1b[33m$/;"	m
 Z_CHUNK	mlx/mlx_png.c	22;"	d	file:
+[	last.vim	/^nnoremap [ :call ThePrev()$/;"	m
+\1	last.vim	/^nnoremap \\1 1gt$/;"	m
+\2	last.vim	/^nnoremap \\2 2gt$/;"	m
+\3	last.vim	/^nnoremap \\3 3gt$/;"	m
+\4	last.vim	/^nnoremap \\4 4gt$/;"	m
+\5	last.vim	/^nnoremap \\5 5gt$/;"	m
+\6	last.vim	/^nnoremap \\6 6gt$/;"	m
+\7	last.vim	/^nnoremap \\7 7gt$/;"	m
+\8	last.vim	/^nnoremap \\8 8gt$/;"	m
+\9	last.vim	/^nnoremap \\9 9gt$/;"	m
+\]	last.vim	/^nnoremap \\] T$/;"	m
+\d	last.vim	/^nnoremap \\d :YcmShowDetailedDiagnostic$/;"	m
+\e	last.vim	/^nnoremap \\e :source $MYVIMRC$/;"	m
+\ev	last.vim	/^nnoremap \\ev :vsplit $MYVIMRC$/;"	m
+\p]	last.vim	/^nnoremap \\p] }$/;"	m
+\t	last.vim	/^nnoremap \\t :FloatermToggle$/;"	m
+]	last.vim	/^nnoremap ] :call TheNext()$/;"	m
+almatrix	includes/so_long.h	/^	char	**almatrix;$/;"	m	struct:s_game
 bpp	mlx/mlx_png.c	/^  int		bpp;$/;"	m	struct:png_info_s	file:
 bytes_per_pixel	mlx/font.c	/^  unsigned int 	 bytes_per_pixel; \/* 2:RGB16, 3:RGB, 4:RGBA *\/ $/;"	m	struct:__anon1	file:
+cc	last.vim	/^nnoremap cc :normal Hi\/\/jkj$/;"	m
+cd	last.vim	/^nnoremap <buffer> <silent> cd :call nerdtree#ui_glue#invokeKeyMap("cd")$/;"	m
 chars	includes/so_long.h	/^	t_char	*chars;$/;"	m	struct:s_game
 col	mlx/mlx_xpm.c	/^  int           col;$/;"	m	struct:s_xpm_col	file:
+collectable	includes/so_long.h	/^	void	*collectable[1];$/;"	m	struct:s_img
 color	mlx/mlx_png.c	/^  int		color;$/;"	m	struct:png_info_s	file:
 color	mlx/mlx_xpm.c	/^  int   color;$/;"	m	struct:s_col_name	file:
 content	libft/includes/libft_list.h	/^	void			*content;$/;"	m	struct:s_list
 counter_words	libft/sources/strings/ft_split.c	/^static	size_t	counter_words(const char *str, char c)$/;"	f	file:
 crc_table	mlx/mlx_png.c	/^unsigned long crc_table[256] = { 0, 0x77073096, 0xee0e612c, 0x990951ba, 0x76dc419, 0x706af48f, 0xe963a535, 0x9e6495a3, 0xedb8832, 0x79dcb8a4, 0xe0d5e91e, 0x97d2d988, 0x9b64c2b, 0x7eb17cbd, 0xe7b82d07, 0x90bf1d91, 0x1db71064, 0x6ab020f2, 0xf3b97148, 0x84be41de, 0x1adad47d, 0x6ddde4eb, 0xf4d4b551, 0x83d385c7, 0x136c9856, 0x646ba8c0, 0xfd62f97a, 0x8a65c9ec, 0x14015c4f, 0x63066cd9, 0xfa0f3d63, 0x8d080df5, 0x3b6e20c8, 0x4c69105e, 0xd56041e4, 0xa2677172, 0x3c03e4d1, 0x4b04d447, 0xd20d85fd, 0xa50ab56b, 0x35b5a8fa, 0x42b2986c, 0xdbbbc9d6, 0xacbcf940, 0x32d86ce3, 0x45df5c75, 0xdcd60dcf, 0xabd13d59, 0x26d930ac, 0x51de003a, 0xc8d75180, 0xbfd06116, 0x21b4f4b5, 0x56b3c423, 0xcfba9599, 0xb8bda50f, 0x2802b89e, 0x5f058808, 0xc60cd9b2, 0xb10be924, 0x2f6f7c87, 0x58684c11, 0xc1611dab, 0xb6662d3d, 0x76dc4190, 0x1db7106, 0x98d220bc, 0xefd5102a, 0x71b18589, 0x6b6b51f, 0x9fbfe4a5, 0xe8b8d433, 0x7807c9a2, 0xf00f934, 0x9609a88e, 0xe10e9818, 0x7f6a0dbb, 0x86d3d2d, 0x91646c97, 0xe6635c01, 0x6b6b51f4, 0x1c6c6162, 0x856530d8, 0xf262004e, 0x6c0695ed, 0x1b01a57b, 0x8208f4c1, 0xf50fc457, 0x65b0d9c6, 0x12b7e950, 0x8bbeb8ea, 0xfcb9887c, 0x62dd1ddf, 0x15da2d49, 0x8cd37cf3, 0xfbd44c65, 0x4db26158, 0x3ab551ce, 0xa3bc0074, 0xd4bb30e2, 0x4adfa541, 0x3dd895d7, 0xa4d1c46d, 0xd3d6f4fb, 0x4369e96a, 0x346ed9fc, 0xad678846, 0xda60b8d0, 0x44042d73, 0x33031de5, 0xaa0a4c5f, 0xdd0d7cc9, 0x5005713c, 0x270241aa, 0xbe0b1010, 0xc90c2086, 0x5768b525, 0x206f85b3, 0xb966d409, 0xce61e49f, 0x5edef90e, 0x29d9c998, 0xb0d09822, 0xc7d7a8b4, 0x59b33d17, 0x2eb40d81, 0xb7bd5c3b, 0xc0ba6cad, 0xedb88320, 0x9abfb3b6, 0x3b6e20c, 0x74b1d29a, 0xead54739, 0x9dd277af, 0x4db2615, 0x73dc1683, 0xe3630b12, 0x94643b84, 0xd6d6a3e, 0x7a6a5aa8, 0xe40ecf0b, 0x9309ff9d, 0xa00ae27, 0x7d079eb1, 0xf00f9344, 0x8708a3d2, 0x1e01f268, 0x6906c2fe, 0xf762575d, 0x806567cb, 0x196c3671, 0x6e6b06e7, 0xfed41b76, 0x89d32be0, 0x10da7a5a, 0x67dd4acc, 0xf9b9df6f, 0x8ebeeff9, 0x17b7be43, 0x60b08ed5, 0xd6d6a3e8, 0xa1d1937e, 0x38d8c2c4, 0x4fdff252, 0xd1bb67f1, 0xa6bc5767, 0x3fb506dd, 0x48b2364b, 0xd80d2bda, 0xaf0a1b4c, 0x36034af6, 0x41047a60, 0xdf60efc3, 0xa867df55, 0x316e8eef, 0x4669be79, 0xcb61b38c, 0xbc66831a, 0x256fd2a0, 0x5268e236, 0xcc0c7795, 0xbb0b4703, 0x220216b9, 0x5505262f, 0xc5ba3bbe, 0xb2bd0b28, 0x2bb45a92, 0x5cb36a04, 0xc2d7ffa7, 0xb5d0cf31, 0x2cd99e8b, 0x5bdeae1d, 0x9b64c2b0, 0xec63f226, 0x756aa39c, 0x26d930a, 0x9c0906a9, 0xeb0e363f, 0x72076785, 0x5005713, 0x95bf4a82, 0xe2b87a14, 0x7bb12bae, 0xcb61b38, 0x92d28e9b, 0xe5d5be0d, 0x7cdcefb7, 0xbdbdf21, 0x86d3d2d4, 0xf1d4e242, 0x68ddb3f8, 0x1fda836e, 0x81be16cd, 0xf6b9265b, 0x6fb077e1, 0x18b74777, 0x88085ae6, 0xff0f6a70, 0x66063bca, 0x11010b5c, 0x8f659eff, 0xf862ae69, 0x616bffd3, 0x166ccf45, 0xa00ae278, 0xd70dd2ee, 0x4e048354, 0x3903b3c2, 0xa7672661, 0xd06016f7, 0x4969474d, 0x3e6e77db, 0xaed16a4a, 0xd9d65adc, 0x40df0b66, 0x37d83bf0, 0xa9bcae53, 0xdebb9ec5, 0x47b2cf7f, 0x30b5ffe9, 0xbdbdf21c, 0xcabac28a, 0x53b39330, 0x24b4a3a6, 0xbad03605, 0xcdd70693, 0x54de5729, 0x23d967bf, 0xb3667a2e, 0xc4614ab8, 0x5d681b02, 0x2a6f2b94, 0xb40bbe37, 0xc30c8ea1, 0x5a05df1b, 0x2d02ef8d };$/;"	v
 depth	mlx/mlx_png.c	/^  int		depth;$/;"	m	struct:png_info_s	file:
+e	last.vim	/^nnoremap <buffer> <silent> e :call nerdtree#ui_glue#invokeKeyMap("e")$/;"	m
+exit	includes/so_long.h	/^	void	*exit[2];$/;"	m	struct:s_img
+f	last.vim	/^nnoremap <buffer> <silent> f :call nerdtree#ui_glue#invokeKeyMap("f")$/;"	m
 font_atlas	mlx/font.c	/^} font_atlas = {$/;"	v	typeref:struct:__anon1	file:
 ft2_strlen	libft/sources/lines/get_next_line_utils_bonus.c	/^size_t	ft2_strlen(char *str)$/;"	f
+ft_actions	sources/so_long.c	/^static	int ft_actions(int keycode, t_game *so_long)$/;"	f	file:
 ft_atoi	libft/sources/converts/ft_atoi.c	/^int	ft_atoi(const char *str)$/;"	f
 ft_atoi_plus	libft/sources/converts/ft_atoi_plus.c	/^long	ft_atoi_plus(const char *str)$/;"	f
+ft_below_limits	sources/check_limits.c	/^static	int ft_below_limits(t_game *so_long)$/;"	f	file:
 ft_bzero	libft/sources/mem_edit/ft_bzero.c	/^void	ft_bzero(void *s, size_t n)$/;"	f
 ft_calloc	libft/sources/mem_edit/ft_calloc.c	/^void	*ft_calloc(size_t count, size_t size)$/;"	f
 ft_check_arg_atoi	libft/sources/converts/ft_atoi_plus.c	/^void	ft_check_arg_atoi(const char *str, int i)$/;"	f
 ft_check_char	sources/checker.c	/^static	int	ft_check_char(t_game *so_long)$/;"	f	file:
 ft_check_errors	sources/checker.c	/^void	ft_check_errors(t_game *so_long)$/;"	f
+ft_check_path	sources/checker.c	/^static	int ft_check_path(t_game *so_long)$/;"	f	file:
 ft_check_size_map	sources/checker.c	/^static	int	ft_check_size_map(t_game *so_long)$/;"	f	file:
 ft_convertx	libft/sources/converts/ft_convertx.c	/^int	ft_convertx(unsigned int num, int base, int mode)$/;"	f
+ft_copy_map	sources/ft_map.c	/^void	ft_copy_map(t_game *so_long)$/;"	f
 ft_count_chars	sources/ft_map.c	/^void	ft_count_chars(t_game *so_long)$/;"	f
 ft_countnbr	libft/sources/converts/ft_itoa.c	/^static	int	ft_countnbr(int n)$/;"	f	file:
+ft_destroy_game	sources/destroy.c	/^void	ft_destroy_game(t_game *so_long)$/;"	f
 ft_doitoa	libft/sources/converts/ft_itoa.c	/^static	char	*ft_doitoa(int n, char *dest, int counter)$/;"	f	file:
 ft_domall	libft/sources/strings/ft_split.c	/^static char	**ft_domall(char *s, char c, char **dest)$/;"	f	file:
+ft_final_sprite_loading	sources/images.c	/^static	void ft_final_sprite_loading(int a, char *path, int ty_sprite, \\$/;"	f	file:
+ft_find_diff_chars	sources/checker.c	/^static	int	ft_find_diff_chars(t_game *so_long)$/;"	f	file:
+ft_find_player	sources/ft_map.c	/^void	ft_find_player(t_game *so_long)$/;"	f
 ft_fitoar	sources/ft_map.c	/^void	ft_fitoar(t_game *so_long, int fd)$/;"	f
 ft_free	libft/sources/strings/ft_split.c	/^static char	*ft_free(char *dest, char **supdest, int g)$/;"	f	file:
+ft_free	sources/before_leaving.c	/^void	ft_free(t_game *so_long)$/;"	f
 ft_get_size_map	sources/ft_map.c	/^void	ft_get_size_map(t_game *so_long, int fd, char *argv[])$/;"	f
 ft_getlines	libft/sources/lines/get_next_line_bonus.c	/^char	*ft_getlines(char *ptr)$/;"	f
 ft_init_game	sources/ft_init.c	/^t_game	*ft_init_game(void)$/;"	f
@@ -158,6 +325,8 @@ ft_isascii	libft/sources/checks/ft_isascii.c	/^int	ft_isascii(int c)$/;"	f
 ft_isdigit	libft/sources/checks/ft_isdigit.c	/^int	ft_isdigit(int c)$/;"	f
 ft_isprint	libft/sources/checks/ft_isprint.c	/^int	ft_isprint(int c)$/;"	f
 ft_itoa	libft/sources/converts/ft_itoa.c	/^char	*ft_itoa(int n)$/;"	f
+ft_load_images	sources/images.c	/^void	ft_load_images(t_game *so_long)$/;"	f
+ft_load_spites	sources/images.c	/^static	void ft_load_spites(char *img_name, int mem_sprite, int ty_sprite, \\$/;"	f	file:
 ft_lstadd_back	libft/sources/list/ft_lstadd_back_bonus.c	/^void	ft_lstadd_back(t_list **lst, t_list *new)$/;"	f
 ft_lstadd_front	libft/sources/list/ft_lstadd_front_bonus.c	/^void	ft_lstadd_front(t_list **lst, t_list *new)$/;"	f
 ft_lstclear	libft/sources/list/ft_lstclear_bonus.c	/^void	ft_lstclear(t_list **lst, void (*del)(void *))$/;"	f
@@ -173,9 +342,19 @@ ft_memcpy	libft/sources/mem_edit/ft_memcpy.c	/^void	*ft_memcpy(void *dst, const 
 ft_memmove	libft/sources/mem_edit/ft_memmove.c	/^void	*ft_memmove(void *dst, const void *src, size_t len)$/;"	f
 ft_memset	libft/sources/mem_edit/ft_memset.c	/^void	*ft_memset(void *b, int c, size_t len)$/;"	f
 ft_newptr	libft/sources/lines/get_next_line_bonus.c	/^char	*ft_newptr(char *ptr)$/;"	f
+ft_no_limits	sources/check_limits.c	/^int ft_no_limits(t_game *so_long)$/;"	f
+ft_path_to_sprite	sources/images.c	/^static	char *ft_path_to_sprite(char *img_name, int n)$/;"	f	file:
+ft_print_background	sources/printer.c	/^void	ft_print_background(t_game *so_long)$/;"	f
+ft_print_chars	sources/print_stack.c	/^static	void ft_print_chars(t_game *so_long)$/;"	f	file:
+ft_print_collectable	sources/printer.c	/^void	ft_print_collectable(t_game *so_long)$/;"	f
+ft_print_exit	sources/printer.c	/^void	ft_print_exit(t_game *so_long)$/;"	f
+ft_print_game	sources/so_long.c	/^static	int ft_print_game(t_game *so_long)$/;"	f	file:
+ft_print_player	sources/printer.c	/^void	ft_print_player(t_game *so_long)$/;"	f
 ft_print_stack	sources/print_stack.c	/^void	ft_print_stack(t_game *t)$/;"	f
+ft_print_walls	sources/printer.c	/^void	ft_print_walls(t_game *so_long)$/;"	f
 ft_printf	libft/sources/printf/ft_printf.c	/^int	ft_printf(char const *src, ...)$/;"	f
 ft_ptr	libft/sources/converts/ft_ptr.c	/^int	ft_ptr(unsigned long long strike, int nextbase)$/;"	f
+ft_put_img	sources/image_printer.c	/^void	ft_put_img(t_game *so_long, void *img, int a, int b)$/;"	f
 ft_putchar	libft/sources/puts/ft_putchar.c	/^int	ft_putchar(const char c)$/;"	f
 ft_putchar2	libft/sources/puts/ft_putnbr_fd.c	/^static	void	ft_putchar2(char c, int fd)$/;"	f	file:
 ft_putchar_fd	libft/sources/puts/ft_putchar_fd.c	/^void	ft_putchar_fd(char c, int fd)$/;"	f
@@ -189,12 +368,14 @@ ft_putstr_fd	libft/sources/puts/ft_putstr_fd.c	/^void	ft_putstr_fd(char *s, int 
 ft_read_line	libft/sources/lines/get_next_line_bonus.c	/^char	*ft_read_line(char *ptr, int fd)$/;"	f
 ft_realconvert	libft/sources/converts/ft_convertx.c	/^static int	ft_realconvert(char *buffer, int i)$/;"	f	file:
 ft_realptr	libft/sources/converts/ft_ptr.c	/^static int	ft_realptr(char *newbuff, int i)$/;"	f	file:
+ft_sides_limits	sources/check_limits.c	/^static	int ft_sides_limits(t_game *so_long)$/;"	f	file:
 ft_split	libft/sources/strings/ft_split.c	/^char	**ft_split(char *s, char c)$/;"	f
 ft_splitter	libft/sources/printf/ft_printf.c	/^static	int	ft_splitter(char const *src, va_list ptr)$/;"	f	file:
 ft_strchr	libft/sources/strings/ft_strchr.c	/^char	*ft_strchr(char *ptr, int n)$/;"	f
 ft_strdup	libft/sources/strings/ft_strdup.c	/^char	*ft_strdup(const char *s1)$/;"	f
 ft_striteri	libft/sources/strings/ft_striteri.c	/^void	ft_striteri(char *s, void (*f)(unsigned int, char*))$/;"	f
 ft_strjoin	libft/sources/strings/ft_strjoin.c	/^char	*ft_strjoin(char *ptr, char *buffer)$/;"	f
+ft_strjoin2	sources/images.c	/^static	char *ft_strjoin2(char *ptr, char *buffer)$/;"	f	file:
 ft_strlcat	libft/sources/strings/ft_strlcat.c	/^size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)$/;"	f
 ft_strlcpy	libft/sources/strings/ft_strlcpy.c	/^size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)$/;"	f
 ft_strlen	libft/sources/checks/ft_strlen.c	/^int	ft_strlen(const char *s)$/;"	f
@@ -206,16 +387,27 @@ ft_strtrim	libft/sources/strings/ft_strtrim.c	/^char	*ft_strtrim(char *s1, char 
 ft_substr	libft/sources/strings/ft_substr.c	/^char	*ft_substr(char *s, unsigned int start, unsigned int len)$/;"	f
 ft_tolower	libft/sources/converts/ft_tolower.c	/^int	ft_tolower(int c)$/;"	f
 ft_toupper	libft/sources/converts/ft_toupper.c	/^int	ft_toupper(int c)$/;"	f
+ft_upper_limit	sources/check_limits.c	/^static	int ft_upper_limit(t_game *so_long)$/;"	f	file:
+gd	last.vim	/^nnoremap gd :EasyCompleteGotoDefinition$/;"	m
 get_next_line	libft/sources/lines/get_next_line_bonus.c	/^char	*get_next_line(int fd)$/;"	f
+gi	last.vim	/^nnoremap <buffer> <silent> gi :call nerdtree#ui_glue#invokeKeyMap("gi")$/;"	m
+go	last.vim	/^nnoremap <buffer> <silent> go :call nerdtree#ui_glue#invokeKeyMap("go")$/;"	m
+gr	last.vim	/^nnoremap gr :EasyCompleteReference$/;"	m
+ground	includes/so_long.h	/^	void	*ground[1];$/;"	m	struct:s_img
+gs	last.vim	/^nnoremap <buffer> <silent> gs :call nerdtree#ui_glue#invokeKeyMap("gs")$/;"	m
+gx	last.vim	/^nmap gx <Plug>NetrwBrowseX$/;"	m
 height	mlx/font.c	/^  unsigned int 	 height;$/;"	m	struct:__anon1	file:
 height	mlx/mlx_png.c	/^  unsigned int	height;$/;"	m	struct:png_info_s	file:
+i	last.vim	/^nnoremap <buffer> <silent> i :call nerdtree#ui_glue#invokeKeyMap("i")$/;"	m
 img	includes/so_long.h	/^	void	*img;$/;"	m	struct:s_game
 imgs	includes/so_long.h	/^	t_img	*imgs;$/;"	m	struct:s_game
 interlace	mlx/mlx_png.c	/^  int		interlace;$/;"	m	struct:png_info_s	file:
+jk	last.vim	/^inoremap jk $/;"	m
+m	last.vim	/^nnoremap <buffer> <silent> m :call nerdtree#ui_glue#invokeKeyMap("m")$/;"	m
 magic	mlx/mlx_png.c	/^unsigned char magic[PNG_MAGIC_SIZE] = {137, 80, 78, 71, 13, 10, 26, 10};$/;"	v
 main	sources/so_long.c	/^int	main(int argc, char *argv[])$/;"	f
 map	includes/so_long.h	/^	char	*map;$/;"	m	struct:s_game
-map_2	includes/so_long.h	/^	char	**map_2;$/;"	m	struct:s_game
+map_first_line	includes/so_long.h	/^	int		map_first_line;$/;"	m	struct:s_game
 map_height	includes/so_long.h	/^	int		map_height;\/\/ altura of the map \/\/$/;"	m	struct:s_game
 map_width	includes/so_long.h	/^	int		map_width;\/\/ anchura del mapa \/\/$/;"	m	struct:s_game
 matrix	includes/so_long.h	/^	char	**matrix;$/;"	m	struct:s_game
@@ -257,9 +449,34 @@ nc	includes/so_long.h	/^	int	nc;$/;"	m	struct:s_char
 ne	includes/so_long.h	/^	int	ne;$/;"	m	struct:s_char
 next	libft/includes/libft_list.h	/^	struct s_list	*next;$/;"	m	struct:s_list	typeref:struct:s_list::s_list
 np	includes/so_long.h	/^	int	np;$/;"	m	struct:s_char
+o	last.vim	/^nnoremap <buffer> <silent> o :call nerdtree#ui_glue#invokeKeyMap("o")$/;"	m
+p	last.vim	/^nnoremap <buffer> <silent> p :call nerdtree#ui_glue#invokeKeyMap("p")$/;"	m
 pixel_data	mlx/font.c	/^  unsigned char	 pixel_data[1140 * 20 * 4 + 1];$/;"	m	struct:__anon1	file:
+pl	includes/so_long.h	/^	int	pl[2];$/;"	m	struct:s_char
+player	includes/so_long.h	/^	void	*player[2];$/;"	m	struct:s_img
 png_info_s	mlx/mlx_png.c	/^typedef struct png_info_s$/;"	s	file:
 png_info_t	mlx/mlx_png.c	/^} png_info_t;$/;"	t	typeref:struct:png_info_s	file:
+q	last.vim	/^nnoremap <buffer> <silent> q :call nerdtree#ui_glue#invokeKeyMap("q")$/;"	m
+r	last.vim	/^nnoremap <buffer> <silent> r :call nerdtree#ui_glue#invokeKeyMap("r")$/;"	m
+s	last.vim	/^nnoremap <buffer> <silent> s :call nerdtree#ui_glue#invokeKeyMap("s")$/;"	m
+s:cpo_save	last.vim	/^let s:cpo_save=&cpo$/;"	v
+s:l	last.vim	/^let s:l = 1 - ((0 * winheight(0) + 36) \/ 72)$/;"	v
+s:l	last.vim	/^let s:l = 13 - ((12 * winheight(0) + 36) \/ 72)$/;"	v
+s:l	last.vim	/^let s:l = 19 - ((18 * winheight(0) + 36) \/ 72)$/;"	v
+s:l	last.vim	/^let s:l = 24 - ((23 * winheight(0) + 34) \/ 68)$/;"	v
+s:l	last.vim	/^let s:l = 3 - ((2 * winheight(0) + 36) \/ 72)$/;"	v
+s:l	last.vim	/^let s:l = 49 - ((48 * winheight(0) + 36) \/ 72)$/;"	v
+s:l	last.vim	/^let s:l = 50 - ((33 * winheight(0) + 36) \/ 72)$/;"	v
+s:l	last.vim	/^let s:l = 50 - ((38 * winheight(0) + 36) \/ 72)$/;"	v
+s:l	last.vim	/^let s:l = 57 - ((56 * winheight(0) + 36) \/ 72)$/;"	v
+s:l	last.vim	/^let s:l = 9 - ((8 * winheight(0) + 36) \/ 72)$/;"	v
+s:save_splitbelow	last.vim	/^let s:save_splitbelow = &splitbelow$/;"	v
+s:save_splitright	last.vim	/^let s:save_splitright = &splitright$/;"	v
+s:save_winminheight	last.vim	/^let s:save_winminheight = &winminheight$/;"	v
+s:save_winminwidth	last.vim	/^let s:save_winminwidth = &winminwidth$/;"	v
+s:so_save	last.vim	/^let s:so_save = &g:so | let s:siso_save = &g:siso | setg so=0 siso=0 | setl so=-1 siso=-1$/;"	v
+s:sx	last.vim	/^let s:sx = expand("<sfile>:p:r")."x.vim"$/;"	v
+s:wipebuf	last.vim	/^  let s:wipebuf = bufnr('%')$/;"	v
 s_char	includes/so_long.h	/^typedef struct	s_char {$/;"	s
 s_col_name	mlx/mlx_xpm.c	/^struct  s_col_name$/;"	s	file:
 s_game	includes/so_long.h	/^typedef	struct s_game {$/;"	s
@@ -267,11 +484,16 @@ s_img	includes/so_long.h	/^typedef	struct	s_img {$/;"	s
 s_list	libft/includes/libft_list.h	/^typedef struct s_list$/;"	s
 s_xpm_col	mlx/mlx_xpm.c	/^typedef struct  s_xpm_col$/;"	s	file:
 src_lenght	libft/sources/strings/ft_strlcpy.c	/^static size_t	src_lenght(const char *src)$/;"	f	file:
+t	last.vim	/^nnoremap <buffer> <silent> t :call nerdtree#ui_glue#invokeKeyMap("t")$/;"	m
 t_char	includes/so_long.h	/^}	t_char;$/;"	t	typeref:struct:s_char
 t_game	includes/so_long.h	/^}	t_game;$/;"	t	typeref:struct:s_game
 t_img	includes/so_long.h	/^}	t_img;$/;"	t	typeref:struct:s_img
 t_list	libft/includes/libft_list.h	/^}	t_list;$/;"	t	typeref:struct:s_list
 t_xpm_col	mlx/mlx_xpm.c	/^} t_xpm_col;$/;"	t	typeref:struct:s_xpm_col	file:
+u	last.vim	/^nnoremap <buffer> <silent> u :call nerdtree#ui_glue#invokeKeyMap("u")$/;"	m
+wall	includes/so_long.h	/^	void	*wall[1];$/;"	m	struct:s_img
 width	mlx/font.c	/^  unsigned int 	 width;$/;"	m	struct:__anon1	file:
 width	mlx/mlx_png.c	/^  unsigned int	width;$/;"	m	struct:png_info_s	file:
 win	includes/so_long.h	/^	void	*win;$/;"	m	struct:s_game
+x	last.vim	/^nnoremap <buffer> <silent> x :call nerdtree#ui_glue#invokeKeyMap("x")$/;"	m
+zt	last.vim	/^normal! zt$/;"	m
