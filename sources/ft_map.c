@@ -6,7 +6,7 @@
 /*   By: gdominic <gdominic@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 12:22:01 by gdominic          #+#    #+#             */
-/*   Updated: 2023/03/07 20:51:12 by gdominic         ###   ########.fr       */
+/*   Updated: 2023/03/08 21:44:32 by gdominic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,7 @@ void	ft_count_chars(t_game *so_long)
 	int	b;
 
 	a = 0;
+	so_long->chars->nc = 0;
 	while (so_long->matrix[a])
 	{
 		b = 0;

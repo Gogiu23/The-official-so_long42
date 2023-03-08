@@ -13,6 +13,7 @@
 /*
  * pl = player position [1] = X; [2] = Y;
  * np = number player;
+ * dp = direccion player [0] = right; [1] = left;
  * nc = number collectables;
  * ne = number exit;
  */
@@ -21,6 +22,7 @@ typedef struct	s_char {
 	int	np;
 	int	nc;
 	int	ne;
+	int	dp;
 }	t_char;
 
 typedef	struct	s_img {
@@ -85,6 +87,10 @@ void	ft_print_exit(t_game *so_long);
 //End game
 void	ft_destroy_game(t_game *so_long);
 
+//Movements
+void	ft_move_right(t_game *so_long);
+void	ft_move_left(t_game *so_long);
+void	ft_move_down(t_game *so_long);
+void	ft_move_up(t_game *so_long);
 
 # endif
-
