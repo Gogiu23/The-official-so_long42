@@ -38,6 +38,7 @@ typedef	struct s_game {
 	void	*img;
 	void	*win;
 	char	*map;
+	int		check;
 	int		map_first_line;
 	int		map_height;// altura of the map //
 	int		map_width;// anchura del mapa //

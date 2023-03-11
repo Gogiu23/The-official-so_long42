@@ -6,7 +6,7 @@
 /*   By: gdominic <gdominic@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 20:26:23 by gdominic          #+#    #+#             */
-/*   Updated: 2023/03/08 21:47:45 by gdominic         ###   ########.fr       */
+/*   Updated: 2023/03/11 22:05:17 by gdominic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ static	void ft_first_print(t_game *so_long)
 
 static	int ft_actions(int keycode, t_game *so_long)
 {
+	so_long->check = 1;
 	if (keycode == 53)
 		ft_destroy_game(so_long);
 	else if (keycode == 2)
@@ -39,12 +40,16 @@ static	int ft_actions(int keycode, t_game *so_long)
 
 static	int ft_print_game(t_game *so_long)
 {
-	mlx_clear_window(so_long->mlx, so_long->win);
-	ft_print_background(so_long);
-	ft_first_print(so_long);
-	ft_print_player(so_long);
-	ft_print_exit(so_long);
-	ft_count_chars(so_long);
+	if (so_long->check == 1)
+	{
+//		mlx_clear_window(so_long->mlx, so_long->win);
+		ft_count_chars(so_long);
+		ft_print_background(so_long);
+		ft_first_print(so_long);
+		ft_print_player(so_long);
+		ft_print_exit(so_long);
+		so_long->check = 0;
+	}
 	return (1);
 }
 
@@ -63,9 +68,10 @@ int	main(int argc, char *argv[])
 			so_long->map_height * PXS, "Rocket man");
 	so_long->img = mlx_new_image(so_long->mlx, so_long->map_width * PXS, \
 			so_long->map_height * PXS);
-	mlx_loop_hook(so_long->mlx, ft_print_game, so_long);
+//	ft_print_background(so_long);
 	mlx_hook(so_long->win, 17, 1L << 0, (void *)exit, 0);
 	mlx_hook(so_long->win, 2, 0, ft_actions, so_long);
+	mlx_loop_hook(so_long->mlx, ft_print_game, so_long);
 	mlx_loop(so_long->mlx);
 	ft_free(so_long);
 	return (0);
