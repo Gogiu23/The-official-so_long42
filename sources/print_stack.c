@@ -6,7 +6,7 @@
 /*   By: gdominic <gdominic@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 20:55:37 by gdominic          #+#    #+#             */
-/*   Updated: 2023/02/23 17:35:04 by gdominic         ###   ########.fr       */
+/*   Updated: 2023/03/13 17:36:08 by gdominic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "../libft/includes/libft.h"
 #include "../mlx/mlx.h"
 
-static	void ft_print_chars(t_game *so_long)
+static	void	ft_print_chars(t_game *so_long)
 {
 	t_char	*chars;
 
@@ -29,8 +29,9 @@ static	void ft_print_chars(t_game *so_long)
 void	ft_print_stack(t_game *t)
 {
 	int	i;
-	int	b = 0;
+	int	b;
 
+	b = 0;
 	i = 0;
 	while (t->matrix[i])
 	{

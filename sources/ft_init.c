@@ -6,7 +6,7 @@
 /*   By: gdominic <gdominic@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 20:42:42 by gdominic          #+#    #+#             */
-/*   Updated: 2023/03/11 21:59:03 by gdominic         ###   ########.fr       */
+/*   Updated: 2023/03/13 17:52:00 by gdominic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,4 +49,6 @@ void	ft_init_variables_struct(t_game *so_long)
 	so_long->chars->pl[0] = 0;
 	so_long->chars->pl[1] = 0;
 	so_long->chars->dp = 1;
+	so_long->chars->mp = 1;
+	so_long->m2 = 0;
 }

@@ -6,7 +6,7 @@
 /*   By: gdominic <gdominic@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 14:35:40 by gdominic          #+#    #+#             */
-/*   Updated: 2023/02/23 17:19:37 by gdominic         ###   ########.fr       */
+/*   Updated: 2023/03/13 18:02:47 by gdominic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	ft_free(t_game *so_long)
 		free(so_long->almatrix);
 	}
 	nbr = 0;
-	if (so_long->matrix) 
+	if (so_long->matrix)
 	{
 		while (so_long->matrix[nbr])
 			free(so_long->matrix[nbr++]);

@@ -6,7 +6,7 @@
 /*   By: gdominic <gdominic@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/10 13:42:01 by gdominic          #+#    #+#             */
-/*   Updated: 2023/02/10 13:53:08 by gdominic         ###   ########.fr       */
+/*   Updated: 2023/03/13 18:02:27 by gdominic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "../libft/includes/libft.h"
 #include "../mlx/mlx.h"
 
-static	int ft_upper_limit(t_game *so_long)
+static	int	ft_upper_limit(t_game *so_long)
 {
 	int	b;
 
@@ -28,7 +28,7 @@ static	int ft_upper_limit(t_game *so_long)
 	return (1);
 }
 
-static	int ft_sides_limits(t_game *so_long)
+static	int	ft_sides_limits(t_game *so_long)
 {
 	int	a;
 
@@ -49,7 +49,7 @@ static	int ft_sides_limits(t_game *so_long)
 	return (1);
 }
 
-static	int ft_below_limits(t_game *so_long)
+static	int	ft_below_limits(t_game *so_long)
 {
 	int	b;
 
@@ -63,7 +63,7 @@ static	int ft_below_limits(t_game *so_long)
 	return (1);
 }
 
-int ft_no_limits(t_game *so_long)
+int	ft_no_limits(t_game *so_long)
 {
 	if (ft_upper_limit(so_long) == 0)
 		return (0);

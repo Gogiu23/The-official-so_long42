@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   so_long.h                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gdominic <gdominic@student.42barcelona.co  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/03/13 18:03:32 by gdominic          #+#    #+#             */
+/*   Updated: 2023/03/13 19:54:59 by gdominic         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef SO_LONG_H
 # define SO_LONG_H
 
@@ -12,20 +24,23 @@
 
 /*
  * pl = player position [1] = X; [2] = Y;
+ * mp = movement player;
  * np = number player;
  * dp = direccion player [0] = right; [1] = left;
  * nc = number collectables;
  * ne = number exit;
  */
-typedef struct	s_char {
-	int	pl[2];
-	int	np;
-	int	nc;
-	int	ne;
-	int	dp;
+
+typedef struct s_char {
+	int		pl[2];
+	int		np;
+	int		nc;
+	int		ne;
+	int		dp;
+	int		mp;
 }	t_char;
 
-typedef	struct	s_img {
+typedef struct s_img {
 	void	*player[2];
 	void	*wall[1];
 	void	*ground[1];
@@ -33,15 +48,26 @@ typedef	struct	s_img {
 	void	*exit[2];
 }	t_img;
 
-typedef	struct s_game {
+/*
+ * matrix = doble dimension array with stored map;
+ * almatrix = doble dimension array with copied map;
+ * m1 = first cordenade of matrix;
+ * m2 = second cordenade of matrix;
+ * map_height = altura del mapa;
+ * map_width = anchura del mapa;
+ */
+
+typedef struct s_game {
 	void	*mlx;
 	void	*img;
 	void	*win;
 	char	*map;
+	int		m1;
+	int		m2;
 	int		check;
 	int		map_first_line;
-	int		map_height;// altura of the map //
-	int		map_width;// anchura del mapa //
+	int		map_height;
+	int		map_width;
 	char	**matrix;
 	char	**almatrix;
 	t_img	*imgs;
@@ -60,7 +86,7 @@ void	ft_copy_map(t_game *so_long);
 
 //Check errors
 void	ft_check_errors(t_game *so_long);
-int 	ft_no_limits(t_game *so_long);
+int		ft_no_limits(t_game *so_long);
 
 //Counting chars
 void	ft_count_chars(t_game *so_long);
@@ -94,4 +120,7 @@ void	ft_move_left(t_game *so_long);
 void	ft_move_down(t_game *so_long);
 void	ft_move_up(t_game *so_long);
 
-# endif
+//Pathfinder
+int	ft_check_path(t_game *so_long, int x, int y);
+
+#endif
