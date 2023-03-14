@@ -6,7 +6,7 @@
 /*   By: gdominic <gdominic@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 09:12:15 by gdominic          #+#    #+#             */
-/*   Updated: 2023/03/13 19:55:37 by gdominic         ###   ########.fr       */
+/*   Updated: 2023/03/14 16:32:05 by gdominic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,12 +70,7 @@ static	int	ft_check_char(t_game *so_long)
 
 void	ft_check_errors(t_game *so_long)
 {
-	int	x;
-	int	y;
-
 	ft_find_player(so_long);
-	x = so_long->chars->pl[0];
-	y = so_long->chars->pl[1];
 	if (ft_check_size_map(so_long) == 0)
 		ft_putstr_error("Error\nInvalid map size\n");
 	if (ft_check_char(so_long) == 0)
@@ -85,6 +80,6 @@ void	ft_check_errors(t_game *so_long)
 	if (ft_no_limits(so_long) == 0)
 		ft_putstr_error("Error\nThe outside map limits are \
 				not the corrects ones\n");
-	if (ft_check_path(so_long, x, y) == 0)
+	if (ft_check_path(so_long) == 0)
 		ft_putstr_error("Error\nThere is no exit available\n");
 }

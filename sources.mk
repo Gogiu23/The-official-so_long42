@@ -7,6 +7,7 @@ SOURCES += sources/ft_map.c
 SOURCES += sources/image_printer.c
 SOURCES += sources/images.c
 SOURCES += sources/movements.c
+SOURCES += sources/pathfinder.c
 SOURCES += sources/print_stack.c
 SOURCES += sources/printer.c
 SOURCES += sources/so_long.c

@@ -6,7 +6,7 @@
 /*   By: gdominic <gdominic@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 20:55:37 by gdominic          #+#    #+#             */
-/*   Updated: 2023/03/13 17:36:08 by gdominic         ###   ########.fr       */
+/*   Updated: 2023/03/14 15:17:31 by gdominic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ static	void	ft_print_chars(t_game *so_long)
 	ft_printf("np: %d\n", chars->np);
 	ft_printf("np: %d\n", chars->ne);
 	ft_printf("np: %d\n", chars->nc);
-	ft_printf("pl[1]: %d\n", so_long->chars->pl[0]);
-	ft_printf("pl[2]: %d\n", so_long->chars->pl[1]);
+	ft_printf("pl[0]: %d\n", so_long->chars->pl[0]);
+	ft_printf("pl[1]: %d\n", so_long->chars->pl[1]);
 }
 
 void	ft_print_stack(t_game *t)
@@ -35,7 +35,7 @@ void	ft_print_stack(t_game *t)
 	i = 0;
 	while (t->matrix[i])
 	{
-		ft_printf("array t->marrix[%d]: \t%s\n", i, t->matrix[i]);
+		ft_printf("array t->matrix[%d]: \t%s\n", i, t->matrix[i]);
 		i++;
 	}
 	ft_printf("Prueba de array: %c\n", t->matrix[2][9]);

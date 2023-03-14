@@ -6,7 +6,7 @@
 /*   By: gdominic <gdominic@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 19:53:45 by gdominic          #+#    #+#             */
-/*   Updated: 2023/03/13 20:21:56 by gdominic         ###   ########.fr       */
+/*   Updated: 2023/03/14 17:42:21 by gdominic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,34 +14,77 @@
 #include "../libft/includes/libft.h"
 #include "../mlx/mlx.h"
 
-static	int	ft_move_verti(t_game *so_long, int x, int y)
+static	int	ft_where_is_the_exit(t_game *so_long)
 {
-	if (so_long->almatrix[x][y + 1] != '1')
+	int	a;
+	int	b;
+
+	a = 0;
+	while (so_long->almatrix[a])
 	{
-		so_long->almatrix[x][y] = 'V';
-		return (0);
+		b = 0;
+		while (so_long->almatrix[a][b])
+		{
+			if (so_long->almatrix[a][b] == 'C')
+				return (0);
+			b++;
+		}
+		a++;
 	}
 	return (1);
 }
 
-static	int	ft_move_hori(t_game *so_long, int x, int y)
+static	int	ft_a_valid_wayout(t_game *so_long)
 {
-	if (so_long->almatrix[x + 1][y] != '1')
+	int	a;
+	int	b;
+
+	a = 0;
+	while (so_long->almatrix[a])
 	{
-		so_long->almatrix[x][y] = 'V';
+		b = 0;
+		while (so_long->almatrix[a][b])
+		{
+			if (so_long->almatrix[a][b] == '0')
+				so_long->almatrix[a][b] = 'V';
+			if (so_long->almatrix[a][b] == 'C')
+				so_long->almatrix[a][b] = 'V';
+			b++;
+		}
+		a++;
+	}
+	if (ft_where_is_the_exit(so_long) == 0)
 		return (0);
+	return (1);
+}
+
+static	int	ft_where_is_P(t_game *so_long)
+{
+	int	x;
+	int	y;
+
+	y = 0;
+	while (so_long->almatrix[y])
+	{
+		x = 0;
+		while (so_long->almatrix[y][x])
+		{
+			if (so_long->almatrix[y][x] == 'P')
+			{
+				if (ft_a_valid_wayout(so_long) == 0)
+					return (0);
+			}
+			x++;
+		}
+		y++;
 	}
 	return (1);
 }
 
-int	ft_check_path(t_game *so_long, int x, int y)
+int	ft_check_path(t_game *so_long)
 {
 	ft_copy_map(so_long);
-	if (ft_move_hori(so_long, x, y) == 0)
-		ft_move_hori(so_long, x++, y);
-	if (ft_move_verti(so_long, x, y) == 0)
-		ft_move_verti(so_long, x, y++);
-	if (ft_check_path(so_long, x, y) == 0)
-		ft_check_path(so_long, x + 1, y);
+	if (ft_where_is_P(so_long) == 0)
+		return (0);
 	return (1);
 }

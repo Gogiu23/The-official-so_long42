@@ -6,7 +6,7 @@
 /*   By: gdominic <gdominic@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 18:03:32 by gdominic          #+#    #+#             */
-/*   Updated: 2023/03/13 19:54:59 by gdominic         ###   ########.fr       */
+/*   Updated: 2023/03/14 17:34:03 by gdominic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,17 @@
  * np = number player;
  * dp = direccion player [0] = right; [1] = left;
  * nc = number collectables;
+ * path_c = number collectable in pathfinder;
  * ne = number exit;
  */
 
 typedef struct s_char {
 	int		pl[2];
+	int		player_x;
+	int		player_y;
 	int		np;
 	int		nc;
+	int		path_c;
 	int		ne;
 	int		dp;
 	int		mp;
@@ -121,6 +125,7 @@ void	ft_move_down(t_game *so_long);
 void	ft_move_up(t_game *so_long);
 
 //Pathfinder
-int	ft_check_path(t_game *so_long, int x, int y);
+int	ft_check_path(t_game *so_long);
+//int	ft_a_valid_wayout(t_game *so_long, int x, int y);
 
 #endif
