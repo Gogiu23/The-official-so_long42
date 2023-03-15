@@ -6,7 +6,7 @@
 /*   By: gdominic <gdominic@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 18:03:32 by gdominic          #+#    #+#             */
-/*   Updated: 2023/03/14 17:34:03 by gdominic         ###   ########.fr       */
+/*   Updated: 2023/03/15 09:50:44 by gdominic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,6 +97,7 @@ void	ft_count_chars(t_game *so_long);
 
 //Print stack
 void	ft_print_stack(t_game *t);
+void	ft_print_second_stack(t_game *so_long);
 
 //Free and cleaning all leaks
 void	ft_free(t_game *so_long);
@@ -125,7 +126,7 @@ void	ft_move_down(t_game *so_long);
 void	ft_move_up(t_game *so_long);
 
 //Pathfinder
-int	ft_check_path(t_game *so_long);
+int		ft_check_path(t_game *so_long);
 //int	ft_a_valid_wayout(t_game *so_long, int x, int y);
 
 #endif

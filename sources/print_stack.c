@@ -6,7 +6,7 @@
 /*   By: gdominic <gdominic@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 20:55:37 by gdominic          #+#    #+#             */
-/*   Updated: 2023/03/14 15:17:31 by gdominic         ###   ########.fr       */
+/*   Updated: 2023/03/15 19:20:07 by gdominic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,4 +52,31 @@ void	ft_print_stack(t_game *t)
 		i++;
 	}
 	ft_print_chars(t);
+}
+
+void	ft_print_second_stack(t_game *so_long)
+{
+	int	i;
+	int	b;
+
+	b = 0;
+	i = 0;
+	while (so_long->almatrix[i])
+	{
+		ft_printf("array so_long->almatrix[%d]: \t%s\n", i, so_long->almatrix[i]);
+		i++;
+	}
+	i = 0;
+	while (so_long->almatrix[i])
+	{
+		b = 0;
+		while (so_long->almatrix[i][b])
+		{
+			ft_printf("%c", so_long->almatrix[i][b]);
+			b++;
+		}
+		ft_printf("\n");
+		i++;
+	}
+	ft_print_chars(so_long);
 }

@@ -6,7 +6,7 @@
 /*   By: gdominic <gdominic@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 20:26:23 by gdominic          #+#    #+#             */
-/*   Updated: 2023/03/13 19:39:42 by gdominic         ###   ########.fr       */
+/*   Updated: 2023/03/15 19:20:44 by gdominic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,6 @@ int	main(int argc, char *argv[])
 	fd = open(argv[1], O_RDONLY);
 	so_long = ft_init_game();
 	ft_get_size_map(so_long, fd, argv);
-//	ft_print_stack(so_long);
 	ft_check_errors(so_long);
 	so_long->win = mlx_new_window(so_long->mlx, so_long->map_width * PXS, \
 			so_long->map_height * PXS, "Rocket man");

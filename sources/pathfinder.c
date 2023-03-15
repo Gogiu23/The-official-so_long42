@@ -6,7 +6,7 @@
 /*   By: gdominic <gdominic@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 19:53:45 by gdominic          #+#    #+#             */
-/*   Updated: 2023/03/14 17:42:21 by gdominic         ###   ########.fr       */
+/*   Updated: 2023/03/15 19:42:18 by gdominic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,69 +14,83 @@
 #include "../libft/includes/libft.h"
 #include "../mlx/mlx.h"
 
+static	int	ft_check_exit_path(t_game *so_long, int r, int c)
+{
+	ft_printf("map: %c\n", so_long->almatrix[r][c]);
+	ft_printf("map: %c\n", so_long->almatrix[r + 1][c]);
+	ft_printf("map: %c\n", so_long->almatrix[r - 1][c]);
+	ft_printf("map: %c\n", so_long->almatrix[r][c + 1]);
+	ft_printf("map: %c\n", so_long->almatrix[r][c - 1]);
+//	exit (0);
+	if (so_long->almatrix[r + 1][c] != 'V' && so_long->almatrix[r - 1][c] \
+			!= 'V' && so_long->almatrix[r][c + 1] != 'V' && \
+			so_long->almatrix[r][c - 1] != 'V')
+		return (0);
+	return (1);
+}
+
 static	int	ft_where_is_the_exit(t_game *so_long)
 {
-	int	a;
-	int	b;
+	int	r;
+	int	c;
 
-	a = 0;
-	while (so_long->almatrix[a])
+	r = 0;
+	while (so_long->almatrix[r])
 	{
-		b = 0;
-		while (so_long->almatrix[a][b])
+		c = 0;
+		while (so_long->almatrix[r][c])
 		{
-			if (so_long->almatrix[a][b] == 'C')
+			if (so_long->almatrix[r][c] == 'C')
 				return (0);
-			b++;
+			if (so_long->almatrix[r][c] == 'E')
+			{
+				if (ft_check_exit_path(so_long, r, c) == 0)
+					return (0);
+			}
+			c++;
 		}
-		a++;
+		r++;
 	}
 	return (1);
 }
 
-static	int	ft_a_valid_wayout(t_game *so_long)
+static	int	ft_a_valid_wayout(t_game *so_long, int r, int c)
 {
-	int	a;
-	int	b;
-
-	a = 0;
-	while (so_long->almatrix[a])
-	{
-		b = 0;
-		while (so_long->almatrix[a][b])
-		{
-			if (so_long->almatrix[a][b] == '0')
-				so_long->almatrix[a][b] = 'V';
-			if (so_long->almatrix[a][b] == 'C')
-				so_long->almatrix[a][b] = 'V';
-			b++;
-		}
-		a++;
-	}
+	if (r < 0 || c < 0 || so_long->almatrix[r][c] == '1' \
+			|| so_long->almatrix[r][c] == 'V')
+		return (0);
+	if (so_long->almatrix[r][c] == 'E')
+		return (0);
+	so_long->almatrix[r][c] = 'V';
+	ft_a_valid_wayout(so_long, r + 1, c);
+	ft_a_valid_wayout(so_long, r - 1, c);
+	ft_a_valid_wayout(so_long, r, c + 1);
+	ft_a_valid_wayout(so_long, r, c - 1);
+	ft_print_second_stack(so_long);
 	if (ft_where_is_the_exit(so_long) == 0)
 		return (0);
 	return (1);
 }
 
-static	int	ft_where_is_P(t_game *so_long)
+static	int	ft_where_is_p(t_game *so_long)
 {
-	int	x;
-	int	y;
+	int	f;
+	int	c;
 
-	y = 0;
-	while (so_long->almatrix[y])
+	f = 0;
+	while (so_long->almatrix[f])
 	{
-		x = 0;
-		while (so_long->almatrix[y][x])
+		c = 0;
+		while (so_long->almatrix[f][c])
 		{
-			if (so_long->almatrix[y][x] == 'P')
+			if (so_long->almatrix[f][c] == 'P')
 			{
-				if (ft_a_valid_wayout(so_long) == 0)
+				if (ft_a_valid_wayout(so_long, f, c) == 0)
 					return (0);
 			}
-			x++;
+			c++;
 		}
-		y++;
+		f++;
 	}
 	return (1);
 }
@@ -84,7 +98,8 @@ static	int	ft_where_is_P(t_game *so_long)
 int	ft_check_path(t_game *so_long)
 {
 	ft_copy_map(so_long);
-	if (ft_where_is_P(so_long) == 0)
+	if (ft_where_is_p(so_long) == 0)
 		return (0);
+	ft_print_second_stack(so_long);
 	return (1);
 }
