@@ -26,7 +26,6 @@ DARK_GRAY	Makefile	/^DARK_GRAY	=	\\033[1;30m$/;"	m
 DARK_GRAY	libft/Makefile	/^DARK_GRAY		=	\\033[1;30m$/;"	m
 DEPS	Makefile	/^DEPS			=$(SOURCES:.c=.d)$/;"	m
 DEPS	libft/Makefile	/^DEPS			= $(SOURCES:.c=.d)$/;"	m
-DEPS_BONUS	Makefile	/^DEPS_BONUS			=$(SOURCES_BONUS:.c=.d)$/;"	m
 DFLAGS	libft/Makefile	/^DFLAGS			= -MMD -MP -g$/;"	m
 END	mlx/Makefile	/^END=$'\\x1b[0m$/;"	m
 ERR_DATA_FILTER	mlx/mlx_png.c	35;"	d	file:
@@ -44,6 +43,7 @@ ERR_STRUCT_MISSCHK	mlx/mlx_png.c	32;"	d	file:
 ERR_ZLIB	mlx/mlx_png.c	33;"	d	file:
 FONT_WIDTH	mlx/mlx_string_put.c	8;"	d	file:
 GET_NEXT_LINE_BONUS_H	libft/includes/get_next_line_bonus.h	13;"	d
+GIT	Makefile	/^GIT				= git submodule init$/;"	m
 GREEN	Makefile	/^GREEN		=	\\033[0;32m$/;"	m
 GREEN	libft/Makefile	/^GREEN			=	\\033[0;32m$/;"	m
 GREEN	mlx/Makefile	/^GREEN=$'\\x1b[32m$/;"	m
@@ -51,7 +51,6 @@ GREY	mlx/Makefile	/^GREY=$'\\x1b[30m$/;"	m
 INC	mlx/Makefile	/^INC=-I.$/;"	m
 INCLUDE_PATH	Makefile	/^INCLUDE_PATH	=.\/includes$/;"	m
 INCLUDE_PATH	libft/Makefile	/^INCLUDE_PATH	= .\/includes$/;"	m
-INCLUDE_PATH_BONUS	Makefile	/^INCLUDE_PATH_BONUS	=.\/includes_bonus$/;"	m
 LIBFTPRINTF_H	libft/includes/libftprintf.h	13;"	d
 LIBFT_CHECKS_H	libft/includes/libft_checks.h	13;"	d
 LIBFT_CONVERSE_H	libft/includes/libft_converse.h	13;"	d
@@ -87,13 +86,11 @@ MODULE_SRC	mlx/Makefile	/^MODULE_SRC= mlx_image.swift mlx_window.swift mlx_init.
 NAME	Makefile	/^NAME			= so_long $/;"	m
 NAME	libft/Makefile	/^NAME 			= libft.a$/;"	m
 NAME	mlx/Makefile	/^NAME=libmlx.dylib$/;"	m
-NAME_BONUS	Makefile	/^NAME_BONUS			= $/;"	m
 NO_COLOR	Makefile	/^NO_COLOR	=	\\033[0m$/;"	m
 NO_COLOR	libft/Makefile	/^NO_COLOR		=	\\033[0m$/;"	m
 OBJ	mlx/Makefile	/^OBJ=$(SRC:.swift=.o)$/;"	m
 OBJS	Makefile	/^OBJS			=$(SOURCES:.c=.o)$/;"	m
 OBJS	libft/Makefile	/^OBJS 			= $(SOURCES:.c=.o)$/;"	m
-OBJS_BONUS	Makefile	/^OBJS_BONUS			=$(SOURCES_BONUS:.c=.o)$/;"	m
 ORANGE	Makefile	/^ORANGE		=	\\033[0;33m$/;"	m
 ORANGE	libft/Makefile	/^ORANGE			=	\\033[0;33m$/;"	m
 PNG_HDR_SIZE	mlx/mlx_png.c	20;"	d	file:
@@ -138,6 +135,7 @@ dp	includes/so_long.h	/^	int		dp;$/;"	m	struct:s_char
 exit	includes/so_long.h	/^	void	*exit[2];$/;"	m	struct:s_img
 font_atlas	mlx/font.c	/^} font_atlas = {$/;"	v	typeref:struct:__anon1	file:
 ft2_strlen	libft/sources/lines/get_next_line_utils_bonus.c	/^size_t	ft2_strlen(char *str)$/;"	f
+ft_a_valid_wayout	sources/pathfinder.c	/^static	int	ft_a_valid_wayout(t_game *so_long, int r, int c)$/;"	f	file:
 ft_actions	sources/so_long.c	/^static	int	ft_actions(int keycode, t_game *so_long)$/;"	f	file:
 ft_atoi	libft/sources/converts/ft_atoi.c	/^int	ft_atoi(const char *str)$/;"	f
 ft_atoi_plus	libft/sources/converts/ft_atoi_plus.c	/^long	ft_atoi_plus(const char *str)$/;"	f
@@ -146,8 +144,10 @@ ft_bzero	libft/sources/mem_edit/ft_bzero.c	/^void	ft_bzero(void *s, size_t n)$/;
 ft_calloc	libft/sources/mem_edit/ft_calloc.c	/^void	*ft_calloc(size_t count, size_t size)$/;"	f
 ft_check_arg_atoi	libft/sources/converts/ft_atoi_plus.c	/^void	ft_check_arg_atoi(const char *str, int i)$/;"	f
 ft_check_char	sources/checker.c	/^static	int	ft_check_char(t_game *so_long)$/;"	f	file:
-ft_check_errors	sources/checker.c	/^void	ft_check_errors(t_game *so_long)$/;"	f
-ft_check_path	sources/pathfinder.c	/^int	ft_check_path(t_game *so_long, int x, int y)$/;"	f
+ft_check_errors	sources/checker.c	/^void	ft_check_errors(t_game *so_long, char *filename)$/;"	f
+ft_check_exit_path	sources/pathfinder.c	/^static	int	ft_check_exit_path(t_game *so_long, int r, int c)$/;"	f	file:
+ft_check_extension	sources/file.c	/^int	ft_check_extension(char *file)$/;"	f
+ft_check_path	sources/pathfinder.c	/^int	ft_check_path(t_game *so_long)$/;"	f
 ft_check_size_map	sources/checker.c	/^static	int	ft_check_size_map(t_game *so_long)$/;"	f	file:
 ft_convertx	libft/sources/converts/ft_convertx.c	/^int	ft_convertx(unsigned int num, int base, int mode)$/;"	f
 ft_copy_map	sources/ft_map.c	/^void	ft_copy_map(t_game *so_long)$/;"	f
@@ -190,11 +190,9 @@ ft_memcpy	libft/sources/mem_edit/ft_memcpy.c	/^void	*ft_memcpy(void *dst, const 
 ft_memmove	libft/sources/mem_edit/ft_memmove.c	/^void	*ft_memmove(void *dst, const void *src, size_t len)$/;"	f
 ft_memset	libft/sources/mem_edit/ft_memset.c	/^void	*ft_memset(void *b, int c, size_t len)$/;"	f
 ft_move_down	sources/movements.c	/^void	ft_move_down(t_game *so_long)$/;"	f
-ft_move_hori	sources/pathfinder.c	/^static	int	ft_move_hori(t_game *so_long, int x, int y)$/;"	f	file:
 ft_move_left	sources/movements.c	/^void	ft_move_left(t_game *so_long)$/;"	f
 ft_move_right	sources/movements.c	/^void	ft_move_right(t_game *so_long)$/;"	f
 ft_move_up	sources/movements.c	/^void	ft_move_up(t_game *so_long)$/;"	f
-ft_move_verti	sources/pathfinder.c	/^static	int	ft_move_verti(t_game *so_long, int x, int y)$/;"	f	file:
 ft_newptr	libft/sources/lines/get_next_line_bonus.c	/^char	*ft_newptr(char *ptr)$/;"	f
 ft_no_limits	sources/check_limits.c	/^int	ft_no_limits(t_game *so_long)$/;"	f
 ft_path_to_sprite	sources/images.c	/^static	char	*ft_path_to_sprite(char *img_name, int n)$/;"	f	file:
@@ -204,6 +202,7 @@ ft_print_collectable	sources/printer.c	/^void	ft_print_collectable(t_game *so_lo
 ft_print_exit	sources/printer.c	/^void	ft_print_exit(t_game *so_long)$/;"	f
 ft_print_game	sources/so_long.c	/^static	int	ft_print_game(t_game *so_long)$/;"	f	file:
 ft_print_player	sources/printer.c	/^void	ft_print_player(t_game *so_long)$/;"	f
+ft_print_second_stack	sources/print_stack.c	/^void	ft_print_second_stack(t_game *so_long)$/;"	f
 ft_print_stack	sources/print_stack.c	/^void	ft_print_stack(t_game *t)$/;"	f
 ft_print_walls	sources/printer.c	/^void	ft_print_walls(t_game *so_long)$/;"	f
 ft_printf	libft/sources/printf/ft_printf.c	/^int	ft_printf(char const *src, ...)$/;"	f
@@ -243,6 +242,8 @@ ft_substr	libft/sources/strings/ft_substr.c	/^char	*ft_substr(char *s, unsigned 
 ft_tolower	libft/sources/converts/ft_tolower.c	/^int	ft_tolower(int c)$/;"	f
 ft_toupper	libft/sources/converts/ft_toupper.c	/^int	ft_toupper(int c)$/;"	f
 ft_upper_limit	sources/check_limits.c	/^static	int	ft_upper_limit(t_game *so_long)$/;"	f	file:
+ft_where_is_p	sources/pathfinder.c	/^static	int	ft_where_is_p(t_game *so_long)$/;"	f	file:
+ft_where_is_the_exit	sources/pathfinder.c	/^static	int	ft_where_is_the_exit(t_game *so_long)$/;"	f	file:
 get_next_line	libft/sources/lines/get_next_line_bonus.c	/^char	*get_next_line(int fd)$/;"	f
 ground	includes/so_long.h	/^	void	*ground[1];$/;"	m	struct:s_img
 height	mlx/font.c	/^  unsigned int 	 height;$/;"	m	struct:__anon1	file:
@@ -298,9 +299,12 @@ nc	includes/so_long.h	/^	int		nc;$/;"	m	struct:s_char
 ne	includes/so_long.h	/^	int		ne;$/;"	m	struct:s_char
 next	libft/includes/libft_list.h	/^	struct s_list	*next;$/;"	m	struct:s_list	typeref:struct:s_list::s_list
 np	includes/so_long.h	/^	int		np;$/;"	m	struct:s_char
+path_c	includes/so_long.h	/^	int		path_c;$/;"	m	struct:s_char
 pixel_data	mlx/font.c	/^  unsigned char	 pixel_data[1140 * 20 * 4 + 1];$/;"	m	struct:__anon1	file:
 pl	includes/so_long.h	/^	int		pl[2];$/;"	m	struct:s_char
 player	includes/so_long.h	/^	void	*player[2];$/;"	m	struct:s_img
+player_x	includes/so_long.h	/^	int		player_x;$/;"	m	struct:s_char
+player_y	includes/so_long.h	/^	int		player_y;$/;"	m	struct:s_char
 png_info_s	mlx/mlx_png.c	/^typedef struct png_info_s$/;"	s	file:
 png_info_t	mlx/mlx_png.c	/^} png_info_t;$/;"	t	typeref:struct:png_info_s	file:
 s_char	includes/so_long.h	/^typedef struct s_char {$/;"	s

@@ -29,6 +29,7 @@ NAME			= so_long
 
 #=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-#
 
+GIT				= git submodule init
 MAKE_LIB		= libft/libft.a
 MAKE_MLX		= mlx/libmlx.a
 CC				= gcc
@@ -65,27 +66,6 @@ $(NAME):: $(MAKE_LIB) $(OBJS)
 $(NAME):: 
 	@printf "\t$(LIGHT_CYAN)$(NAME)Programm already compiled!! $(RESET)\n"
 
-#=-=-=-=-=-=-=-=-=- BONUS =-=-=-=-=-=-=-=-=-=-=-=-=-#
-
-NAME_BONUS			= 
-
-INCLUDE_PATH_BONUS	=./includes_bonus
-
-OBJS_BONUS			=$(SOURCES_BONUS:.c=.o)
-DEPS_BONUS			=$(SOURCES_BONUS:.c=.d)
-
-bonus:
-	$(MAKE) -C libft
-	@$(MAKE) $(NAME_BONUS)
-
-$(NAME_BONUS):: $(MAKE_LIB) $(OBJS_BONUS)
-	@$(CC) $(CFLAGS) $^ -o $@
-	@printf "\033[2K\r$(YELLOW)$(NAME): $(LIGHT_BLUE)$<$(RESET)"
-	@printf "\033[2K\r$(BLUE)$(NAME): $(GREEN)Bonus compiled and ready[√]$(RESET)\n"
-
-$(NAME_BONUS)::
-	@printf "$(LIGHT_GREEN)$(NAME_BONUS) is up to date✅$(RESET)\n"
-	
 #=-=-=-=-=-=-=-=-= RULES -=-=-=-=-=-=-=-=-=-=-=-=-=-#
 
 gmk:
@@ -120,4 +100,3 @@ re: fclean all
 .PHONY: all clean fclean re gmk bonus gmk_bonus
 
 #=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-#
-

@@ -2,6 +2,7 @@ SOURCES += sources/before_leaving.c
 SOURCES += sources/check_limits.c
 SOURCES += sources/checker.c
 SOURCES += sources/destroy.c
+SOURCES += sources/file.c
 SOURCES += sources/ft_init.c
 SOURCES += sources/ft_map.c
 SOURCES += sources/image_printer.c

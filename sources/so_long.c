@@ -6,7 +6,7 @@
 /*   By: gdominic <gdominic@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 20:26:23 by gdominic          #+#    #+#             */
-/*   Updated: 2023/03/15 19:20:44 by gdominic         ###   ########.fr       */
+/*   Updated: 2023/03/16 14:18:47 by gdominic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,11 +64,13 @@ int	main(int argc, char *argv[])
 	int		fd;
 
 	if (argc == 1)
-		return (0);
+		ft_putstr_error("Error\nMissing paramethers\n");
 	fd = open(argv[1], O_RDONLY);
+	if (fd < 0)
+		ft_putstr_error("Error no hay file\n");
 	so_long = ft_init_game();
 	ft_get_size_map(so_long, fd, argv);
-	ft_check_errors(so_long);
+	ft_check_errors(so_long, argv[1]);
 	so_long->win = mlx_new_window(so_long->mlx, so_long->map_width * PXS, \
 			so_long->map_height * PXS, "Rocket man");
 	so_long->img = mlx_new_image(so_long->mlx, so_long->map_width * PXS, \

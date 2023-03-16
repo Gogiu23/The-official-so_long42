@@ -6,7 +6,7 @@
 /*   By: gdominic <gdominic@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 19:53:45 by gdominic          #+#    #+#             */
-/*   Updated: 2023/03/15 19:42:18 by gdominic         ###   ########.fr       */
+/*   Updated: 2023/03/16 12:44:28 by gdominic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,6 @@
 
 static	int	ft_check_exit_path(t_game *so_long, int r, int c)
 {
-	ft_printf("map: %c\n", so_long->almatrix[r][c]);
-	ft_printf("map: %c\n", so_long->almatrix[r + 1][c]);
-	ft_printf("map: %c\n", so_long->almatrix[r - 1][c]);
-	ft_printf("map: %c\n", so_long->almatrix[r][c + 1]);
-	ft_printf("map: %c\n", so_long->almatrix[r][c - 1]);
-//	exit (0);
 	if (so_long->almatrix[r + 1][c] != 'V' && so_long->almatrix[r - 1][c] \
 			!= 'V' && so_long->almatrix[r][c + 1] != 'V' && \
 			so_long->almatrix[r][c - 1] != 'V')
@@ -66,7 +60,6 @@ static	int	ft_a_valid_wayout(t_game *so_long, int r, int c)
 	ft_a_valid_wayout(so_long, r - 1, c);
 	ft_a_valid_wayout(so_long, r, c + 1);
 	ft_a_valid_wayout(so_long, r, c - 1);
-	ft_print_second_stack(so_long);
 	if (ft_where_is_the_exit(so_long) == 0)
 		return (0);
 	return (1);
@@ -100,6 +93,5 @@ int	ft_check_path(t_game *so_long)
 	ft_copy_map(so_long);
 	if (ft_where_is_p(so_long) == 0)
 		return (0);
-	ft_print_second_stack(so_long);
 	return (1);
 }

@@ -6,7 +6,7 @@
 /*   By: gdominic <gdominic@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 18:03:32 by gdominic          #+#    #+#             */
-/*   Updated: 2023/03/15 09:50:44 by gdominic         ###   ########.fr       */
+/*   Updated: 2023/03/16 11:56:59 by gdominic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,7 @@ void	ft_fitoar(t_game *so_long, int fd);
 void	ft_copy_map(t_game *so_long);
 
 //Check errors
-void	ft_check_errors(t_game *so_long);
+void	ft_check_errors(t_game *so_long, char *filename);
 int		ft_no_limits(t_game *so_long);
 
 //Counting chars
@@ -127,6 +127,8 @@ void	ft_move_up(t_game *so_long);
 
 //Pathfinder
 int		ft_check_path(t_game *so_long);
-//int	ft_a_valid_wayout(t_game *so_long, int x, int y);
+
+//Check extension
+int		ft_check_extension(char *file);
 
 #endif
