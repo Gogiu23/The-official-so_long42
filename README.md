@@ -6,3 +6,5 @@
 <p align="center">
 <img src="https://github.com/Gogiu23/The-official-so_long42/blob/master/images_markdown/game_start.png" alt="drawing" width="700"/>
 </p1>
+
+### Check errores
