@@ -29,7 +29,8 @@ NAME			= so_long
 
 #=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-#
 
-GIT				= git submodule init
+GIT				= submodule init
+GIT_UPDATE		= submodule update
 MAKE_LIB		= libft/libft.a
 MAKE_MLX		= mlx/libmlx.a
 CC				= gcc
@@ -48,6 +49,8 @@ OBJS			=$(SOURCES:.c=.o)
 DEPS			=$(SOURCES:.c=.d)
 
 all:
+	git $(GIT) 
+	git $(GIT_UPDATE)
 	$(MAKE) -C mlx
 	@cp ./mlx/libmlx.dylib ./libmlx.dylib
 	$(MAKE) -C libft
