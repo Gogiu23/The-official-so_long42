@@ -89,6 +89,7 @@ clean:
 
 fclean: clean
 	@$(RM) $(NAME) $(NAME_BONUS)
+	@$(RM) libmlx.dylib
 	@echo "Cleaning all the compiled library!"
 
 re: fclean all
