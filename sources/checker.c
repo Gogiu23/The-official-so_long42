@@ -6,7 +6,7 @@
 /*   By: gdominic <gdominic@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 09:12:15 by gdominic          #+#    #+#             */
-/*   Updated: 2023/03/16 14:26:45 by gdominic         ###   ########.fr       */
+/*   Updated: 2023/03/20 10:33:31 by gdominic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,8 +80,7 @@ void	ft_check_errors(t_game *so_long, char *filename)
 	if (ft_find_diff_chars(so_long) == 0)
 		ft_putstr_error("Error\nInvalid chars presents in the map\n");
 	if (ft_no_limits(so_long) == 0)
-		ft_putstr_error("Error\nThe outside map limits are \
-				not the corrects ones\n");
+		ft_putstr_error("Error\nMap is corrupt\n");
 	if (ft_check_path(so_long) == 0)
 		ft_putstr_error("Error\nThere is no exit available\n");
 }

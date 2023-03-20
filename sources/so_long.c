@@ -6,7 +6,7 @@
 /*   By: gdominic <gdominic@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 20:26:23 by gdominic          #+#    #+#             */
-/*   Updated: 2023/03/16 14:18:47 by gdominic         ###   ########.fr       */
+/*   Updated: 2023/03/20 10:32:32 by gdominic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,11 +63,9 @@ int	main(int argc, char *argv[])
 	t_game	*so_long;
 	int		fd;
 
-	if (argc == 1)
-		ft_putstr_error("Error\nMissing paramethers\n");
+	if (argc != 2)
+		ft_putstr_error("Error\nUsage: ./so_long [*.ber]\n");
 	fd = open(argv[1], O_RDONLY);
-	if (fd < 0)
-		ft_putstr_error("Error no hay file\n");
 	so_long = ft_init_game();
 	ft_get_size_map(so_long, fd, argv);
 	ft_check_errors(so_long, argv[1]);
