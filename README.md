@@ -397,3 +397,266 @@ static	int	ft_check_exit_path(t_game *so_long, int r, int c)
 	return (1);
 }
 ```
+### ▶︎ LIBMLX
+The libmlx, or libmlx.a, is a graphics library provided by the company Silicon Graphics (SGI). It is often used in conjunction with the X Window System on Unix-like operating systems to provide graphics capabilities to applications.
+
+In particular, the libmlx library provides functions for creating and manipulating windows, handling input events such as mouse clicks and key presses, and rendering graphics using OpenGL or other graphics APIs. It is commonly used in the development of graphical applications such as games, scientific visualization tools, and graphical user interfaces.
+
+The libmlx library is often used in combination with the Simple DirectMedia Layer (SDL) library to create cross-platform graphical applications. It is also used in the development of the popular computer game Minecraft.
+The version we use is called minilibX, developed by 42-Paris, suitable for students.
+
+**SUMMARY OF ALL FUNCTIONS**
+=[ mlx_init ]=
+Initialize the MLX library. Must be called before ANY other function. Return NULL if initialization failed.
+´´´c
+	void	*mlx_init();
+	- generate the mlx instance
+´´´
+=[ mlx_new_window ]=
+Creates new window instance. It will return a window instance pointer. 
+
+	void	*mlx_new_window(void *mlx_ptr, int size_x, int size_y, char *title);
+	- *mlx_ptr = the mlx instance pointer
+	- size_x = the width of the window
+	- size_y = the height of the window
+	- *title = title of the window
+	- return void* = the window instance pointer.
+
+=[ mlx_clear_window ]=
+Clear the current window. This is not a recommend function to use. Instead it is recomment to use the function "mlx_put_image_to_window" with a recycled imaged that you have cleared
+
+	int	mlx_clear_window(void *mlx_ptr, void *mlx_ptr);
+	- *mlx_ptr = the mlx instance pointer
+	- *win_ptr = the window instance pointer
+	- return int = no return value
+
+=[ mlx_destroy_window ]=
+Destroy a window instance accordingly.
+
+	int	mlx_destroy_window(void *mlx_ptr, void *win_ptr);
+	- *mlx_ptr = the mlx instance
+	- *win_ptr = the window instance
+	- no return value
+
+*********************************************************************************************
+
+==[ SOME OTHER FUNCTIONS HELPFUL ]==
+
+=[ mlx_get_color_value ]=
+
+	uint	mlx_get_color_value(void *mlx_ptr, int color);
+	- *mlx_ptr = the mlx instance
+	- color = the int color (0xTTRRGGBB)
+	- return value = the converted color
+
+=[ mlx_pixel_put ]=
+Puts a pixel on the screen. it is suggested to use the function "mlx_put_image_to_window" instead.
+
+	int	mlx_pixel_put(void *mlx_ptr, void *win_ptr, int x, int y, int color);
+	- *mlx_ptr = the mlx instance
+	- *win_ptr = the window instance pointer
+	- int x = the coordinate x of the pixel to draw
+	- int y = the coordinate y of the pixel to draw
+	- int color = the color of the pixel to draw (0XTTRRGGBB)
+	- return = no return value
+
+=[ mlx_string_put ]=
+Puts a string on the location (x,y) in the given window
+
+	int	mlx_string_put(void *mlx_ptr, void *win_ptr, int x, int y, int color, char *string);
+	- *mlx_ptr = the mlx instance
+	- int x = the x cordinate
+	- int y = the y cordinate
+	- int color = the font color
+	- char *string = the text to write
+	- return = no return value
+
+*********************************************************************************************
+
+==[ IMAGES FUNCTIONS HELPFUL ]==
+
+=[ mlx_new_image ]=
+Creates a new MLX comptatible image. The recommend way to buffer the image you are rendering. Will return a reference pointer to the image.
+
+	void	*mlx_new_image(void *mlx_ptr, int width, int height);
+	- *mlx_ptr = the mlx instance
+	- int width = the width of the image you want to put to the screen 
+	- int height = the height of the image you want to put to the screen
+	- return = the image instance reference
+
+=[ mlx_get_data_addr ]=
+Gets the memory address of the given image. Memory of images is weird. It will set the line size in your 
+given pointer. To get or set the value of the pixel (5, 100) in an image size of (500, 500), we would need to locate the position as follows:
+
+	int pos = (y * size_line + x * (bits_per_pixel / 8));
+
+Here we multiply size_line by y as we need to skip y lines (and yes, line size is not equal to the amount of pixels in a line). We then add the remaining x units multiplied by bits_per_pixel / 8 to align with the final location.
+
+To modify each pixel with the correct color, we need to do some more fancy stuff. As we need to align the bits before writing, we need to do the following for the best result:
+
+	char	*mlx_data_addr = mlx_get_data_addr();
+	*(unsigned int *)mlx_data_addr = color;
+
+the function prototype is as follows:
+
+	char	*mlx_get_data_addr(void *img_ptr, int *bits_per_pixel, int size_line, int *endian);
+	- *img_ptr = the image instance
+	- *bits_per_pixel = a pointer to where the bpp is written
+	- *size_line = a pointer to where the line is written
+	- *endian = a pointer to where the endian is written
+	- return = the memory address tof the image
+
+=[ mlx_put_image_to_window ]=
+Puts an image to the given window instance at location (x,y). This is the recommended way to write large amounts of graphical data in one go. Do mind that when changing the memory of the locations, it will be displayed directly on the window.
+
+	int	mlx_put_image_to_window(void *mlx_ptr, void *win_ptr, void *img_ptr, int x, int y);
+	- *mlx_ptr = the mlx instance
+	- *win_ptr = the window instance
+	- int x = the x location of where the image ought to be placed
+	- int y = the y location of where the image ought to be placed
+	- return = no return value
+
+=[ mlx_destroy_image ]=
+Destroy an image instance accordingly.
+
+	int	mlx_destroy_image(void *mlx_ptr, void *img_ptr);
+	- *mlx_ptr = the mlx instance
+	- *img_ptr = the image instance
+	- return = no return value
+
+*********************************************************************************************
+
+==[ HOOKS ]==
+These functions will allow you to hook the MiniLibx functions. This is core funcionality and is required to use the library effectively.
+
+=[ mlx_mouse_hook ]=
+Hook into mouse events. This will trigger every time you click somewhere in the given screen.
+
+	int	mlx_mouse_hook(void *win_ptr, int (*f)(), void *param);
+	- *win_ptr = the windows instance
+	- int (*f)() = the handler function, will be called as follows:
+					(*f)(int button, int x, int y, void *param);
+	- void *param = the parameters to give on each event
+	- return = no return value
+
+=[ mlx_key_hook ]=
+Hook key into events. This will trigger every time a key is pressed in a focused window. Unfocused 
+window will not register any events.
+
+	int	mlx_key_hook(void *win_ptr, int (*f)(), void *param);
+	- *win_ptr = the window instance
+	- int (*f)() = the handler function that will be called like that:
+				(*f)(int key_code, void *param);
+	- void *param = the parameter to give on each event
+	- return = no return value
+
+=[ mlx_expose_hook ]=
+Has no defined behaviour
+
+=[ mlx_loop_hook ]=
+Hook into the loop
+
+	int	mlx_loop_hook(void *mlx_ptr, int (*f)(), void *param)
+	- *mlx_ptr = the mlx instance
+	- int (*f)() = the handler function, will be called as follows
+				(*f)(void *param);
+	- void *param = the parameter to give on each event
+	- return = no return value
+
+=[ mlx_loop ]=
+Loop over the given MLX pointer. Each hook that was registeres prior to this will be called accordingly by
+order of a registration.
+
+	int	mlx_loop(void *mlx_ptr);
+	- *mlx_ptr = the mlx instance
+	- return = no return value
+
+*********************************************************************************************
+
+==[ IMAGE CONVERSIONS ]==
+These are functions that are useful for loading sprites or even saving images
+
+=[ mlx_xpm_to_image ]=
+Converts xpm data to a new image instance
+
+	void	*mlx_xpm_to_image(void *mlx_ptr, char **xpm_data, int *width, int *height);
+	- *mlx_ptr = the mlx instance
+	- char **xpm_data = the xpm data in a 2 dimensional char array
+	- int *width = a pointer to where the width ought to be written
+	- int *height = a pointer to where the height ought to be written
+	- return = the image instance, NULL in case of error
+
+=[ mlx_xpm_file_to_image ]=
+Converts an xpm file to a new image instance.
+
+	void	*mlx_xpm_file_to_image(void *mlx_ptr, char *filename, int *width, int *height);
+	- *mlx_ptr = the mlx instance
+	- char *filename = the file to load;
+	- int *width = a pointer to where the width ought to be written
+	- int *height = a pointer to where the height ought to be written
+	- return = the image instance, NULL in case of error
+
+*********************************************************************************************
+
+==[ MOUSE FUNCTIONS ]==
+These functions will allow you to hide, show, move or get the mouse poisition.
+
+=[ mlx_mouse_hide ]=
+Hide the mouse
+
+	int	mlx_mouse_hide();
+
+=[ mlx_mouse_show ]=
+Shows the mouse
+
+	int	mlx_mouse_show();
+
+=[ mlx_mouse_move ]=
+Move the cursor to the given location
+
+	int	mlx_mouse_move(void *win_ptr, int x, int y);
+	- *win_ptr = the window instance
+	- int x =  the x location to move to
+	- int y = the y location to move to
+	- return = has no return value
+
+=[ mlx_mouse_get_pos ]=
+Get the current mouse position on the window
+
+	int	mlx_mouse_get_pos(void *win_ptr, int *x, int *y);
+	- *win_ptr = the window instance
+	- int *x = the pointer to write the x location to move to
+	- int *y = the pointer to write the y location to move to
+	- return = has no return value
+
+*********************************************************************************************
+
+==[ KEY AUTO REPEAT ]==
+These functions will allow you to either enable or disable key autorepeat.
+
+=[ mlx_do_key_autorepeatoff ]=
+Disable key auto repeat.
+
+	int	mlx_do_key_autorepeatoff(void *mlx_ptr)
+
+=[ mlx_do_key_autorepeaton ]=
+Enable key auto repeat
+
+	int	mlx_do_key_autorepeaton(void *mlx_ptr);
+
+*********************************************************************************************
+
+==[ UN-CATEGORIZED ]==
+
+=[ mlx_do_sync ]=
+
+	int	mlx_do_sync(void *mlx_ptr);
+
+=[ mlx_get_screen_size ]=
+
+	int	mlx_get_screen_size(void *mlx_ptr, int *sizex, int *sizey);
+	- *mlx_ptr = the mlx instance
+	- *sizex = the screen width
+	- *sizey = the screen height
+	- return = no return value
+´´´
