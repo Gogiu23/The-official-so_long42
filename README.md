@@ -12,7 +12,7 @@
 ## TOC
 
 1. [_The init_](#The-init)
-2. [The map](#The-map)
+2. [_The map_](#The-map)
 
 ## The init
 On this point i made a function mother that recopile all the variable and start all of them to zero.
