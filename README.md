@@ -14,7 +14,7 @@
 1. [_The init_](#The-init)
 2. [The map](#The-map)
 
-## Theinit
+## The init
 On this point i made a function mother that recopile all the variable and start all of them to zero.
 Here all my structs are allocated with `ft_calloc` from my **Libft**.
 ```c
