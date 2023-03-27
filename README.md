@@ -9,8 +9,12 @@
 
 </h1>
 
-[TOC]
-### ▶︎ The init...
+## TOC
+
+1. [_Theinit_](#Theinit)
+2. [The map](#The-map)
+
+## _Theinit_
 On this point i made a function mother that recopile all the variable and start all of them to zero.
 Here all my structs are allocated with `ft_calloc` from my **Libft**.
 ```c
