@@ -13,6 +13,8 @@
 
 1. [_The init_](#The-init)
 2. [_The map_](#The-map)
+3. check errors
+4. LibmlX
 
 ## The init
 On this point i made a function mother that recopile all the variable and start all of them to zero.
