@@ -11,10 +11,10 @@
 
 ## TOC
 
-1. [_Theinit_](#Theinit)
+1. [The init](#The-init)
 2. [The map](#The-map)
 
-## _Theinit_
+## Theinit
 On this point i made a function mother that recopile all the variable and start all of them to zero.
 Here all my structs are allocated with `ft_calloc` from my **Libft**.
 ```c
@@ -60,7 +60,7 @@ typedef struct s_game {
 }	t_game;
 ```
 
-### ▶︎ The map
+## ▶︎ The map
 
 We use again the `get_next_line` from the **Libft** (we also discovered that `ft_strjoin` was givinig me several leaks) in order
 to read the map we'll pass from the command line.
