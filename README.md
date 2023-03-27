@@ -406,7 +406,9 @@ The libmlx library is often used in combination with the Simple DirectMedia Laye
 The version we use is called minilibX, developed by 42-Paris, suitable for students.
 
 **SUMMARY OF ALL FUNCTIONS**
-=[ mlx_init ]=
+
+#### mlx_init
+
 Initialize the MLX library. Must be called before ANY other function. Return NULL if initialization failed.
 ´´´c
 	void	*mlx_init();
