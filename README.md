@@ -128,7 +128,7 @@ void	ft_fitoar(t_game *so_long, int fd)
 The name `ft_fitoar(t_game *so_long, int fd)` came to me inspired from `ft_atoi`. It means nothing else that *files to array*.
 Now is the time to check the possibles errors made in the map.
 
-### ▶︎ Check errors
+## Check errors
 First of all we have to check the errors and manage the parsing code coming form the console. 
 ```c
 if (argc != 2)
