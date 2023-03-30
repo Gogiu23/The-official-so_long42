@@ -13,7 +13,7 @@
 
 1. [_The init_](#The-init)
 2. [_The map_](#The-map)
-3. check errors
+3. [_check errors_](#Check-errors)
 4. LibmlX
 
 ## The init
