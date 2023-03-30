@@ -13,8 +13,8 @@
 
 1. [_The init_](#The-init)
 2. [_The map_](#The-map)
-3. [_check errors_](#Check-errors)
-4. LibmlX
+3. [_Check errors_](#Check-errors)
+4. [_LibmlX_](#LIBMLX)
 
 ## The init
 On this point i made a function mother that recopile all the variable and start all of them to zero.
@@ -403,7 +403,7 @@ static	int	ft_check_exit_path(t_game *so_long, int r, int c)
 	return (1);
 }
 ```
-### ▶︎ LIBMLX
+## LIBMLX
 The libmlx, or libmlx.a, is a graphics library provided by the company Silicon Graphics (SGI). It is often used in conjunction with the X Window System on Unix-like operating systems to provide graphics capabilities to applications.
 
 In particular, the libmlx library provides functions for creating and manipulating windows, handling input events such as mouse clicks and key presses, and rendering graphics using OpenGL or other graphics APIs. It is commonly used in the development of graphical applications such as games, scientific visualization tools, and graphical user interfaces.
