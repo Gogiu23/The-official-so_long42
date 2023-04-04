@@ -5,7 +5,7 @@
 
 <h1 align="center">
 
-![gif](https://github.com/Gogiu23/The-official-so_long42/blob/master/images_markdown/so_long.gif)
+[image](https://github.com/Gogiu23/The-official-so_long42/blob/master/images_markdown/so_long.gif)
 
 </h1>
 
