@@ -6,7 +6,7 @@
 /*   By: gdominic <gdominic@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 18:03:32 by gdominic          #+#    #+#             */
-/*   Updated: 2023/03/16 11:56:59 by gdominic         ###   ########.fr       */
+/*   Updated: 2023/05/13 03:53:46 by gdominic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ t_game	*ft_init_struct(void);
 void	ft_init_variables_struct(t_game *so_long);
 
 //Map handler
-void	ft_get_size_map(t_game *so_long, int fd, char *argv[]);
+void	ft_get_size_map(t_game *so_long, int fd, char *argv);
 void	ft_fitoar(t_game *so_long, int fd);
 void	ft_copy_map(t_game *so_long);
 

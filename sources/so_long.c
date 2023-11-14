@@ -6,7 +6,7 @@
 /*   By: gdominic <gdominic@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 20:26:23 by gdominic          #+#    #+#             */
-/*   Updated: 2023/03/20 10:32:32 by gdominic         ###   ########.fr       */
+/*   Updated: 2023/05/13 03:54:51 by gdominic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,17 +58,14 @@ static	int	ft_print_game(t_game *so_long)
 	return (1);
 }
 
-int	main(int argc, char *argv[])
+static void so_long(char *argv)
 {
 	t_game	*so_long;
-	int		fd;
-
-	if (argc != 2)
-		ft_putstr_error("Error\nUsage: ./so_long [*.ber]\n");
-	fd = open(argv[1], O_RDONLY);
+	int fd;
+	fd = open(argv, O_RDONLY);
 	so_long = ft_init_game();
 	ft_get_size_map(so_long, fd, argv);
-	ft_check_errors(so_long, argv[1]);
+	ft_check_errors(so_long, argv);
 	so_long->win = mlx_new_window(so_long->mlx, so_long->map_width * PXS, \
 			so_long->map_height * PXS, "Rocket man");
 	so_long->img = mlx_new_image(so_long->mlx, so_long->map_width * PXS, \
@@ -80,5 +77,17 @@ int	main(int argc, char *argv[])
 	mlx_loop_hook(so_long->mlx, ft_print_game, so_long);
 	mlx_loop(so_long->mlx);
 	ft_free(so_long);
+}
+
+int	main(int argc, char *argv[])
+{
+//	t_game	*so_long;
+//	int		fd;
+
+	if (argc == 2)
+//		ft_putstr_error("Error\nUsage: ./so_long [*.ber]\n");
+		so_long(argv[1]);
+//	else
+//		ft_read_env();
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: gdominic <gdominic@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 12:22:01 by gdominic          #+#    #+#             */
-/*   Updated: 2023/03/16 11:57:41 by gdominic         ###   ########.fr       */
+/*   Updated: 2023/05/13 03:53:58 by gdominic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "../libft/includes/libft.h"
 #include "../mlx/mlx.h"
 
-void	ft_get_size_map(t_game *so_long, int fd, char *argv[])
+void	ft_get_size_map(t_game *so_long, int fd, char *argv)
 {
 	int	bol;
 
@@ -36,7 +36,7 @@ void	ft_get_size_map(t_game *so_long, int fd, char *argv[])
 		so_long->map_height++;
 	}
 	close(fd);
-	fd = open(argv[1], O_RDONLY);
+	fd = open(argv, O_RDONLY);
 	ft_fitoar(so_long, fd);
 }
 
